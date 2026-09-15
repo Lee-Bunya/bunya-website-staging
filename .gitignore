@@ -17,3 +17,6 @@ out/
 Thumbs.db
 .vscode/
 .idea/
+
+# Source archive (unpacked into this folder — no need to version it)
+bunya-website.zip

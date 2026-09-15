@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Command Centre — Bunya</title>
+<meta name="description" content="The Bunya Command Centre: a custom-branded operating system for financial advice firms, built on Microsoft Power Platform. Workflow, CRM, revenue, reporting, compliance and AI skills — owned by the firm.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a id="top"></a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-colour.png" alt="Bunya" class="logo-img"></a>
+    <button class="menu-btn" aria-label="Open menu" onclick="openMenu()">&#8801;</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-item">
+        <a>Platform <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="command-centre.html" class="dd-link"><span class="t">Command Centre</span><span class="d">The core platform that runs the practice</span></a>
+          <a href="broadcast-hq.html" class="dd-link"><span class="t">Broadcast HQ</span><span class="d">Compliant marketing, adviser to firm</span></a>
+          <a href="bunya-voice.html" class="dd-link"><span class="t">Bunya Voice</span><span class="d">Calls &amp; meetings, captured to the record</span></a>
+        </div>
+      </div>
+      <a href="grow.html">Grow</a>
+      <a href="partners.html">Partners</a>
+      <div class="nav-item">
+        <a>Resources <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="blog.html" class="dd-link"><span class="t">Insights</span><span class="d">Practical answers for principals</span></a>
+          <a href="faq.html" class="dd-link"><span class="t">FAQ</span><span class="d">The questions principals ask</span></a>
+          <a href="case-studies.html" class="dd-link"><span class="t">Case studies</span><span class="d">Real firms, running Bunya</span></a>
+          <a href="cost-calculator.html" class="dd-link"><span class="t">Cost calculator</span><span class="d">What the current way is costing you</span></a>
+          <div class="dd-sep"></div>
+          <a href="vs-traditional-crm.html" class="dd-link"><span class="t">Bunya vs a CRM</span><span class="d">Why it isn't just another CRM</span></a>
+          <a href="xplan-alternative.html" class="dd-link"><span class="t">Xplan alternative</span><span class="d">The alternative you own, not rent</span></a>
+          <a href="advice-software-alternatives.html" class="dd-link"><span class="t">Alternatives compared</span><span class="d">The whole field, side by side</span></a>
+          <a href="fin365-alternative.html" class="dd-link"><span class="t">Bunya vs Fin365</span><span class="d">The closest comparison, honestly</span></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a demo &#8594;</a>
+    </nav>
+  </div>
+</header>
+<!-- FULL-SCREEN MOBILE MENU -->
+<div class="m-overlay" id="mMenu">
+  <div class="m-top">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></a>
+    <button class="m-close" aria-label="Close menu" onclick="closeMenu()">&#10005;</button>
+  </div>
+  <div class="m-scroll">
+    <div class="m-group">
+      <a href="index.html" class="top-link">Home</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Platform</div>
+      <a href="command-centre.html">Command Centre</a>
+      <a href="broadcast-hq.html">Broadcast HQ</a>
+      <a href="bunya-voice.html">Bunya Voice</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Grow</div>
+      <a href="grow.html">Grow your firm</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Resources</div>
+      <a href="blog.html">Insights</a>
+      <a href="faq.html">FAQ</a><a href="case-studies.html">Case studies</a>
+      <a href="cost-calculator.html">Cost calculator</a>
+      <a href="vs-traditional-crm.html">Bunya vs a CRM</a>
+      <a href="xplan-alternative.html">Xplan alternative</a>
+      <a href="advice-software-alternatives.html">Alternatives compared</a>
+      <a href="fin365-alternative.html">Bunya vs Fin365</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Company</div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="m-cta"><a href="contact.html">Book a demo &#8594;</a></div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; The platform</p>
+    <div class="hero-split" style="padding-top:0">
+      <div>
+        <p class="eyebrow">The platform</p>
+        <h1>One screen. The whole advice business.</h1>
+        <p class="lead" style="margin-top:1em">The Command Centre is a single, custom-branded system &mdash; built on the Microsoft Power Platform &mdash; that runs the entire advice business: every new-client and review journey, every task, every dollar of pipeline and actual revenue, live management reporting, and a layer of AI skills that draft the advice work from your firm's own data. And the firm owns all of it.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a demo <span class="arrow">&#8594;</span></a>
+          <a href="#capabilities" class="btn btn-outline btn-lg">See the capabilities</a>
+        </div>
+      </div>
+      <div>
+        <div class="cc-mock" aria-hidden="true">
+          <div class="bar"><span class="t">Command Centre &middot; Practice dashboard</span><span class="r">&#9679; Live</span></div>
+          <div class="screen">
+            <div class="cc-kpis">
+              <div class="cc-kpi"><div class="n">$4.2M</div><div class="l">Pipeline, live</div></div>
+              <div class="cc-kpi"><div class="n">1,014</div><div class="l">Active reviews</div></div>
+              <div class="cc-kpi"><div class="n">37</div><div class="l">Due this week</div></div>
+            </div>
+            <div class="cc-rows">
+              <div class="cc-row"><span class="nm">Nguyen Family Trust</span><span class="dt">Review 90d</span><span class="st auto">Self-started</span></div>
+              <div class="cc-row"><span class="nm">Patel Super</span><span class="dt">SoA drafted</span><span class="st ok">Adviser review</span></div>
+              <div class="cc-row"><span class="nm">Okafor Holdings</span><span class="dt">BID audit</span><span class="st ok">Passed</span></div>
+              <div class="cc-row"><span class="nm">Bianchi Retirement</span><span class="dt">Consent 30d</span><span class="st due">Escalated</span></div>
+            </div>
+            <div class="cc-bars"><i style="height:45%"></i><i style="height:60%"></i><i style="height:52%"></i><i style="height:74%"></i><i style="height:66%"></i><i style="height:88%"></i><i style="height:80%"></i><i style="height:96%"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT IS -->
+<section class="section section-pale">
+  <div class="container">
+    <div class="whatis">
+      <div>
+        <p class="eyebrow">What it is</p>
+        <h2>A branded command centre, not another platform you rent.</h2>
+        <p class="lead" style="margin-top:.8em">A way off the legacy CRM, workflow and review platforms &mdash; replaced by one system built to how your firm actually works, sitting inside your own Microsoft environment. The CRM is built in. Everything around it is what makes it a command centre.</p>
+      </div>
+      <div class="whatis-cards">
+        <div class="wcard"><h4>Built on Power Platform</h4><p>A branded system over Power Platform and Power BI &mdash; the firm keeps full control of its own data.</p></div>
+        <div class="wcard"><h4>You own your data lake</h4><p>All client data stays inside the firm's Microsoft ecosystem &mdash; SharePoint, Outlook, Teams &mdash; not a third party accessing your customers.</p></div>
+        <div class="wcard"><h4>Replaces the old CRM stack</h4><p>Keeps only the minimum legacy modules where a licensee still requires them &mdash; the rest runs in one place.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES OVERVIEW -->
+<section class="section" id="capabilities">
+  <div class="container">
+    <p class="eyebrow">What it runs</p>
+    <h2 class="measure-narrow">Everything the practice does, in one system.</h2>
+    <p class="lead measure" style="margin-top:.6em">Eleven capabilities, one source of truth &mdash; for the people who do the work, the people who run the firm, and the people who answer to the regulator.</p>
+    <div class="cap-grid">
+      <div class="cap"><div class="cap-n">01</div><div><span class="aud">Foundation</span><h3>Client records &amp; CRM</h3><p>A full CRM at the core &mdash; contacts, history, documents and relationships &mdash; so everything runs off one source of truth.</p></div></div>
+      <div class="cap"><div class="cap-n">02</div><div><span class="aud">Adviser</span><h3>Advice &amp; review workflow</h3><p>Structured but flexible journeys for new-client and review work, each broken into tasks along a thread, with your firm's own labels.</p></div></div>
+      <div class="cap"><div class="cap-n">03</div><div><span class="aud">Whole firm</span><h3>Role clarity &amp; accountability</h3><p>Admin, paraplanning, associate and adviser &mdash; who does what, at every step, with primary and secondary roles per action.</p></div></div>
+      <div class="cap"><div class="cap-n">04</div><div><span class="aud">Adviser &middot; flagship</span><h3>One-click fact find, SoA &amp; RoA</h3><p>A full fact find, Statement of Advice or Record of Advice, each generated from a single click &mdash; the flagship of the skills engine. A human always approves.</p></div></div>
+      <div class="cap"><div class="cap-n">05</div><div><span class="aud">Adviser</span><h3>AI skills engine</h3><p>Compliance audits, insurance needs analysis, strategy papers, fee calculators &mdash; you describe the job, not the skill name, and each states what it needs before it runs. On your data, to your logic. Your firm can build its own in plain English, refine them a line at a time, and schedule the routine ones to run on their own &mdash; always handing back a draft to check.</p></div></div>
+      <div class="cap"><div class="cap-n">06</div><div><span class="aud">Principal</span><h3>Revenue &amp; pipeline</h3><p>Fees on every advice record flow live into a forward pipeline and Power BI &mdash; projected versus actual, always current.</p></div></div>
+      <div class="cap"><div class="cap-n">07</div><div><span class="aud">Principal</span><h3>Live management reporting</h3><p>A helicopter view &mdash; every file, task and turnaround time, bottleneck heat-maps, workload per person. No status meetings.</p></div></div>
+      <div class="cap"><div class="cap-n">08</div><div><span class="aud">Compliance</span><h3>Compliance, audit &amp; data control</h3><p>Checks against Best Interest Duty and the Code of Ethics, a seven-year evidence trail, audit by secure link &mdash; and a record of where AI was used on a task, so your AI governance is evidenced too.</p></div></div>
+      <div class="cap"><div class="cap-n">09</div><div><span class="aud">Everyone</span><h3>Cowork &mdash; AI assistant</h3><p>Microsoft 365 Copilot's Cowork mode, connected to your Command Centre: describe a job in plain English and it works through it &mdash; running skills, reading your SharePoint and Outlook, drafting documents, and now <strong>acting on your say-so too</strong> (create a job, update a record) with every change confirmed before it's saved. It tells you honestly what it doesn't know rather than inventing it.</p></div></div>
+      <div class="cap"><div class="cap-n">10</div><div><span class="aud">End client</span><h3>Client portal</h3><p>A view for the people you look after &mdash; so your clients can see and do their part, as part of the same system.</p></div></div>
+      <div class="cap"><div class="cap-n">11</div><div><span class="aud">The firm</span><h3>Bunya Portal &mdash; support &amp; changes</h3><p>Your direct line to Bunya: request help or a change in plain English, track your build and requests, and reach your documentation &mdash; instead of emailing support tickets and waiting. Included with ongoing support.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ONBOARDING PLAYBOOK + CONTROL MODEL -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">The onboarding playbook</p>
+    <h2 class="measure-narrow">From a raw client folder to a paraplanner handover &mdash; in five supervised stages.</h2>
+    <p class="lead measure" style="margin-top:.6em">The biggest skill in the system takes a new client through the whole advice-preparation pipeline. It does the careful reading and drafting between each stage &mdash; and stops at a gate after every one, where an adviser approves before it continues.</p>
+    <div class="playbook">
+      <div class="stages">
+        <div class="stage"><div class="sn">Stage 1</div><h4>Intake &amp; file-note review</h4><p>Classifies documents, parses the fact find, runs the checks, and flags real inconsistencies in the notes.</p><span class="gate">Gate 1 &middot; you approve</span></div>
+        <div class="stage"><div class="sn">Stage 2</div><h4>Strategy paper &amp; fees</h4><p>Drafts a brand-compliant, multi-section strategy paper and populates the fee calculator &mdash; flagging fees over threshold.</p><span class="gate">Gate 2 &middot; you approve</span></div>
+        <div class="stage"><div class="sn">Stage 3</div><h4>BID &amp; Code of Ethics audit</h4><p>Audits the whole file against the Best Interests Duty and all twelve Code of Ethics standards, pinning each gap to a rule.</p><span class="gate">Gate 3 &middot; you approve</span></div>
+        <div class="stage"><div class="sn">Stage 4</div><h4>Pre-paraplanner file audit</h4><p>A final pass over the assembled file, turning everything still open into one ranked issues register.</p><span class="gate">Gate 4 &middot; you approve</span></div>
+        <div class="stage"><div class="sn">Stage 5</div><h4>SoA handover pack</h4><p>Assembles the strategy request, authority to proceed and a file manifest &mdash; and stops before anything is sent or filed.</p><span class="gate">Gate 5 &middot; you authorise</span></div>
+      </div>
+    </div>
+
+    <div class="control-band">
+      <p class="eyebrow">The part that matters most</p>
+      <h3>The AI does the work between the gates. You make every decision that matters.</h3>
+      <p class="lead" style="color:rgba(255,255,255,.85);max-width:60ch">This isn't "AI drafts, a human approves" as a slogan &mdash; it's control built into every step. Here's what that means in practice.</p>
+      <div class="control-grid">
+        <div class="ci"><h4>Nothing changes without your say-so</h4><p>It proposes specific edits with reasons, then waits. You accept, remediate or override &mdash; the next stage stays blocked until you do.</p></div>
+        <div class="ci"><h4>Your originals are never touched</h4><p>Approved edits are written to dated copies. It won't rename or move a file in SharePoint without stopping to ask you first.</p></div>
+        <div class="ci"><h4>Honest about what it doesn't know</h4><p>Where the data is missing it writes "needs confirmation" &mdash; it never invents a name, a date or a figure to fill a gap.</p></div>
+        <div class="ci"><h4>Hard-stops it won't let you skip</h4><p>Some compliance steps can't be overridden. On a real file, the pipeline won't hand over until they're genuinely resolved.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEEP DIVES -->
+<section class="section section-pale">
+  <div class="container">
+    <p class="eyebrow">A closer look</p>
+    <h2 class="measure-narrow">The capabilities that change how the firm runs.</h2>
+
+    <div class="frow">
+      <div>
+        <div class="tag">The dashboard</div>
+        <h3>One screen, the whole business &mdash; personalised per user</h3>
+        <p>The home screen is a live, single-glance view of the whole practice. Every person sees the work assigned to them, and the work on their own matters assigned to others.</p>
+        <ul>
+          <li>All active advice work and reviews in one place &mdash; nothing in a side spreadsheet</li>
+          <li>Live pipeline revenue, straight from the advice records</li>
+          <li>A personal "due this week" counter for each user</li>
+          <li>Click a tile and drop straight into that work</li>
+        </ul>
+      </div>
+      <div class="frow-media"><div class="imgph"><span class="ic">&#9635;</span><span class="lbl">Swap: dashboard screenshot</span></div></div>
+    </div>
+
+    <div class="frow">
+      <div>
+        <div class="tag">Revenue &amp; pipeline</div>
+        <h3>Every dollar, projected and actual</h3>
+        <p>Fee data entered on each advice record flows live into reporting &mdash; no re-keying, no month-end reconciliation spreadsheet. A projected date field produces a forward, board-ready revenue pipeline.</p>
+        <ul>
+          <li>Upfront and ongoing fees captured on every advice document</li>
+          <li>Live to Power BI &mdash; a real-time view across the whole practice</li>
+          <li>Toggle projected versus actual &mdash; what's coming vs what's arrived</li>
+          <li>Handles part-payment reality without breaking the numbers</li>
+        </ul>
+      </div>
+      <div class="frow-media"><div class="imgph"><span class="ic">&#9650;</span><span class="lbl">Swap: Power BI revenue view</span></div></div>
+    </div>
+
+    <div class="frow">
+      <div>
+        <div class="tag">Live reporting</div>
+        <h3>The numbers, without the waiting</h3>
+        <p>Every data point connects straight into a live Power BI layer &mdash; filterable by adviser or across the whole business. It gives the principal an independent way to cross-check management reporting and challenge it where the numbers don't line up.</p>
+        <ul>
+          <li>Turnaround and bottlenecks shown by stage, with a heat-map</li>
+          <li>Every task by person &mdash; workload and how long work takes</li>
+          <li>Revenue, pipeline and team activity in one place</li>
+          <li>A helicopter view of where everything is, at any time</li>
+        </ul>
+      </div>
+      <div class="frow-media"><div class="imgph"><span class="ic">&#9636;</span><span class="lbl">Swap: reporting dashboard</span></div></div>
+    </div>
+
+    <div class="frow">
+      <div>
+        <div class="tag">AI skills</div>
+        <h3>Your data. Your logic. Your AI.</h3>
+        <p>A core part of the system: custom AI skills that run against the firm's own data to draft advice work &mdash; with a human always in the loop. Skills are built to the firm's own logic, and can be created by the firm itself via Cowork.</p>
+        <ul>
+          <li>Insurance needs analysis from file notes, Teams and Outlook data</li>
+          <li>A compliance / audit skill against Best Interest Duty and the Corporations Act</li>
+          <li>Strategy papers and a built-in fee calculator from your own logic</li>
+          <li>Document generation &mdash; PDFs, spreadsheets, PowerPoints &mdash; on your data</li>
+        </ul>
+      </div>
+      <div class="frow-media"><div class="imgph"><span class="ic">&#10022;</span><span class="lbl">Swap: skill in action</span></div></div>
+    </div>
+
+    <div class="frow">
+      <div>
+        <div class="tag">Compliance &amp; data control</div>
+        <h3>Audit-ready. Firm-owned.</h3>
+        <p>Core documents &mdash; the SoA, the Authority to Proceed &mdash; are stored with review threads and revenue tracked through the system. Staying inside the Microsoft ecosystem is exactly what keeps the firm in control of its own data lake, and what unlocks the AI.</p>
+        <ul>
+          <li>Audit handled by sending the auditor a few secure SharePoint links</li>
+          <li>Evidence chains keyed to compliance-manual clauses</li>
+          <li>Your data lake, not a third party's centralised one</li>
+          <li>Human approval gates &mdash; nothing leaves because the AI decided it should</li>
+        </ul>
+      </div>
+      <div class="frow-media"><div class="imgph"><span class="ic">&#9670;</span><span class="lbl">Swap: audit / evidence view</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT'S BUILT -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">How it's delivered</p>
+    <h2 class="measure-narrow">A guided build &mdash; not a drop-and-run product.</h2>
+    <p class="lead measure" style="margin-top:.6em">You get the same workflow, CRM, reporting and AI setup already built and running in a live advice practice &mdash; walked through, adapted to your firm, and supported after go-live.</p>
+    <div class="timeline">
+      <div class="tstep"><div class="wk">STEP 1</div><h3>Discovery-led</h3><p>The team walks through the system and captures what needs to change to suit your firm.</p></div>
+      <div class="tstep"><div class="wk">STEP 2</div><h3>~6-week build</h3><p>Ongoing input for roughly six weeks, with changes made as it's constructed.</p></div>
+      <div class="tstep"><div class="wk">STEP 3</div><h3>Run-in</h3><p>A side-by-side period as work moves across &mdash; the hands-on transition that drives team buy-in.</p></div>
+      <div class="tstep"><div class="wk">STEP 4</div><h3>Go-live &amp; support</h3><p>Ongoing support channel and a design/build schedule. Then it's yours, in your tenancy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-deep">
+      <img class="lattice" src="assets/pinecone-white.png" alt="" aria-hidden="true">
+      <p class="eyebrow">See it on your practice</p>
+      <h2>The whole business, on one screen.</h2>
+      <p class="lead" style="margin-top:.6em">Book a demo and we'll walk you through the working Command Centre on your own data &mdash; or explore the modules that plug straight in.</p>
+      <div class="btn-row">
+        <a href="contact.html" class="btn btn-primary btn-lg">Book a demo <span class="arrow">&#8594;</span></a>
+        <a href="broadcast-hq.html" class="btn btn-outline-light btn-lg">Explore the modules</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container">
+    <div class="fcols">
+      <div>
+        <div class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></div>
+        <p class="tagline">The command centre advice firms own. Built on Microsoft, in your tenancy, to your firm's way of working.</p>
+      </div>
+      <div><h4>Platform</h4><a href="command-centre.html">Command Centre</a><a href="broadcast-hq.html">Broadcast HQ</a><a href="bunya-voice.html">Bunya Voice</a></div>
+      <div><h4>Resources</h4><a href="cost-calculator.html">Cost calculator</a><a href="vs-traditional-crm.html">Bunya vs a CRM</a><a href="xplan-alternative.html">Xplan alternative</a><a href="advice-software-alternatives.html">Alternatives compared</a><a href="faq.html">FAQ</a><a href="blog.html">Insights</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div><h4>Get started</h4><a href="contact.html#check">Run the free check</a><a href="contact.html">Book a demo</a></div>
+    </div>
+    <div class="fine"><span>&copy; 2026 Bunya. The operating system for Australian financial advice firms.</span><span>Australia &middot; Power Platform delivery</span></div>
+  </div>
+</footer>
+
+<script>
+function openMenu(){document.getElementById('mMenu').classList.add('open');document.body.classList.add('menu-open');}
+function closeMenu(){document.getElementById('mMenu').classList.remove('open');document.body.classList.remove('menu-open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+</script>
+</body>
+</html>

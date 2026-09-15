@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insights — Bunya</title>
+<meta name="description" content="Practical answers for advice-firm principals — running reviews, proving fee-for-service, building versus buying practice software, and the operating system behind a modern advice business.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-colour.png" alt="Bunya" class="logo-img"></a>
+    <button class="menu-btn" aria-label="Open menu" onclick="openMenu()">&#8801;</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-item">
+        <a>Platform <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="command-centre.html" class="dd-link"><span class="t">Command Centre</span><span class="d">The core platform that runs the practice</span></a>
+          <a href="broadcast-hq.html" class="dd-link"><span class="t">Broadcast HQ</span><span class="d">Compliant marketing, adviser to firm</span></a>
+          <a href="bunya-voice.html" class="dd-link"><span class="t">Bunya Voice</span><span class="d">Calls &amp; meetings, captured to the record</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a>Resources <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="blog.html" class="dd-link"><span class="t">Insights</span><span class="d">Practical answers for principals</span></a>
+          <a href="faq.html" class="dd-link"><span class="t">FAQ</span><span class="d">The questions principals ask</span></a>
+          <a href="case-studies.html" class="dd-link"><span class="t">Case studies</span><span class="d">Real firms, running Bunya</span></a>
+          <a href="cost-calculator.html" class="dd-link"><span class="t">Cost calculator</span><span class="d">What the current way is costing you</span></a>
+          <div class="dd-sep"></div>
+          <a href="vs-traditional-crm.html" class="dd-link"><span class="t">Bunya vs a CRM</span><span class="d">Why it isn't just another CRM</span></a>
+          <a href="xplan-alternative.html" class="dd-link"><span class="t">Xplan alternative</span><span class="d">The alternative you own, not rent</span></a>
+          <a href="advice-software-alternatives.html" class="dd-link"><span class="t">Alternatives compared</span><span class="d">The whole field, side by side</span></a>
+          <a href="fin365-alternative.html" class="dd-link"><span class="t">Bunya vs Fin365</span><span class="d">The closest comparison, honestly</span></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a demo &#8594;</a>
+    </nav>
+  </div>
+</header>
+<!-- FULL-SCREEN MOBILE MENU -->
+<div class="m-overlay" id="mMenu">
+  <div class="m-top">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></a>
+    <button class="m-close" aria-label="Close menu" onclick="closeMenu()">&#10005;</button>
+  </div>
+  <div class="m-scroll">
+    <div class="m-group">
+      <a href="index.html" class="top-link">Home</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Platform</div>
+      <a href="command-centre.html">Command Centre</a>
+      <a href="broadcast-hq.html">Broadcast HQ</a>
+      <a href="bunya-voice.html">Bunya Voice</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Grow</div>
+      <a href="grow.html">Grow your firm</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Resources</div>
+      <a href="blog.html">Insights</a>
+      <a href="faq.html">FAQ</a><a href="case-studies.html">Case studies</a>
+      <a href="cost-calculator.html">Cost calculator</a>
+      <a href="vs-traditional-crm.html">Bunya vs a CRM</a>
+      <a href="xplan-alternative.html">Xplan alternative</a>
+      <a href="advice-software-alternatives.html">Alternatives compared</a>
+      <a href="fin365-alternative.html">Bunya vs Fin365</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Company</div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="m-cta"><a href="contact.html">Book a demo &#8594;</a></div>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Insights</p>
+    <span class="modtag"><span class="dot"></span> Insights</span>
+    <h1 class="measure">Practical answers for advice-firm principals.</h1>
+    <p class="lead measure" style="margin-top:1em">Clear, useful thinking on running a modern advice business &mdash; reviews, compliance, revenue, and the systems underneath. Written to answer the questions principals actually ask.</p>
+  </div>
+</section>
+
+<!-- FEATURED + GRID -->
+<section class="section section-pale">
+  <div class="container">
+    <div class="blog-filter">
+      <a href="#" class="on">All</a>
+      <a href="#">Operations</a>
+      <a href="#">Compliance</a>
+      <a href="#">Revenue</a>
+      <a href="#">AI &amp; automation</a>
+      <a href="#">Growth</a>
+    </div>
+
+    <!-- FEATURED -->
+    <a href="blog-practice-operating-system.html" class="featured-post">
+      <div class="fp-thumb"><span class="flag">Cornerstone</span><span class="ic">&#9635;</span></div>
+      <div class="fp-body">
+        <div class="cat">Operations</div>
+        <h3>What is a "practice operating system" &mdash; and why advice firms are moving to one</h3>
+        <p>The difference between a CRM that stores your clients and a command centre that runs the work around them &mdash; and why the distinction is starting to decide which firms scale.</p>
+        <span class="readmore">Read the article &#8594;</span>
+        <div class="meta">Placeholder article &middot; ~8 min read</div>
+      </div>
+    </a>
+
+    <div class="blog-section-label">Latest articles</div>
+    <div class="blog-grid">
+      <a href="blog-stop-reviews-slipping.html" class="post">
+        <div class="thumb"><span class="ic">&#9673;</span></div>
+        <div class="body">
+          <div class="cat">Reviews</div>
+          <h3>How do you stop client reviews slipping through the cracks?</h3>
+          <p>Why review cycles fail on memory and spreadsheets &mdash; and what a self-starting review process actually looks like.</p>
+          <div class="meta"><span>~6 min read</span><span class="rm">Read &#8594;</span></div>
+        </div>
+      </a>
+      <a href="blog-fee-for-service.html" class="post">
+        <div class="thumb"><span class="ic">&#9670;</span></div>
+        <div class="body">
+          <div class="cat">Compliance</div>
+          <h3>Fee-for-service: proving it, not just consenting to it</h3>
+          <p>Capturing consent isn't the same as proving the service was delivered &mdash; and it's the second that triggers remediation.</p>
+          <div class="meta"><span>~7 min read</span><span class="rm">Read &#8594;</span></div>
+        </div>
+      </a>
+      <a href="blog-build-vs-buy.html" class="post">
+        <div class="thumb"><span class="ic">&#9650;</span></div>
+        <div class="body">
+          <div class="cat">Strategy</div>
+          <h3>Should an advice firm build or buy its software?</h3>
+          <p>The real trade-offs between renting per-seat SaaS and owning a system built to your firm &mdash; on cost, control and risk.</p>
+          <div class="meta"><span>~6 min read</span><span class="rm">Read &#8594;</span></div>
+        </div>
+      </a>
+      <a href="blog-one-click-soa.html" class="post">
+        <div class="thumb"><span class="ic">&#10022;</span></div>
+        <div class="body">
+          <div class="cat">AI</div>
+          <h3>What does a "one-click Statement of Advice" really mean?</h3>
+          <p>How advice documents can draft themselves from data you already hold &mdash; and why a human still approves every one.</p>
+          <div class="meta"><span>~5 min read</span><span class="rm">Read &#8594;</span></div>
+        </div>
+      </a>
+      <a href="blog-grow-without-hiring.html" class="post">
+        <div class="thumb"><span class="ic">&#9636;</span></div>
+        <div class="body">
+          <div class="cat">Growth</div>
+          <h3>How do you grow an advice firm without hiring in lockstep?</h3>
+          <p>The capacity ceiling every scaling practice hits &mdash; and how to serve more client groups on the team you already have.</p>
+          <div class="meta"><span>~6 min read</span><span class="rm">Read &#8594;</span></div>
+        </div>
+      </a>
+      <a href="blog-audit-ready.html" class="post">
+        <div class="thumb"><span class="ic">&#9671;</span></div>
+        <div class="body">
+          <div class="cat">Compliance</div>
+          <h3>Getting audit-ready without the fortnight of assembling files</h3>
+          <p>Why the evidence should build itself as you go &mdash; and what an audit looks like when it does.</p>
+          <div class="meta"><span>~5 min read</span><span class="rm">Read &#8594;</span></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="blog-note"><strong>Template note:</strong> these are placeholder cards showing the redesigned layout &mdash; a featured cornerstone piece, a category filter, then an even grid. Replace with real articles, each written as a direct answer to a principal's question (answer up top, depth below), and link each card to its own article page.</div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-deep">
+      <img class="lattice" src="assets/pinecone-white.png" alt="" aria-hidden="true">
+      <p class="eyebrow">See it on your practice</p>
+      <h2>Reading is one thing. Seeing it run is another.</h2>
+      <p class="lead" style="margin-top:.6em">Book a demo and we'll walk you through the working command centre on your own data.</p>
+      <div class="btn-row"><a href="contact.html" class="btn btn-primary btn-lg">Book a demo <span class="arrow">&#8594;</span></a><a href="contact.html#check" class="btn btn-outline-light btn-lg">Run the free check</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container">
+    <div class="fcols">
+      <div>
+        <div class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></div>
+        <p class="tagline">The command centre advice firms own. Built on Microsoft, in your tenancy, to your firm's way of working.</p>
+      </div>
+      <div><h4>Platform</h4><a href="command-centre.html">Command Centre</a><a href="broadcast-hq.html">Broadcast HQ</a><a href="bunya-voice.html">Bunya Voice</a><a href="grow.html">Grow</a>
+      <a href="partners.html">Partners</a></div>
+      <div><h4>Resources</h4><a href="cost-calculator.html">Cost calculator</a><a href="vs-traditional-crm.html">Bunya vs a CRM</a><a href="xplan-alternative.html">Xplan alternative</a><a href="advice-software-alternatives.html">Alternatives compared</a><a href="faq.html">FAQ</a><a href="blog.html">Insights</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div><h4>Get started</h4><a href="contact.html#check">Run the free check</a><a href="contact.html">Book a demo</a></div>
+    </div>
+    <div class="fine"><span>&copy; 2026 Bunya. The operating system for Australian financial advice firms.</span><span>Australia &middot; Power Platform delivery</span></div>
+  </div>
+</footer>
+<script>
+function openMenu(){document.getElementById('mMenu').classList.add('open');document.body.classList.add('menu-open');}
+function closeMenu(){document.getElementById('mMenu').classList.remove('open');document.body.classList.remove('menu-open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+</script>
+</body>
+</html>

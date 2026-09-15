@@ -1,45 +1,560 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-AU">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="noindex, nofollow" />
-  <title>Bunya — Staging</title>
-  <style>
-    :root { color-scheme: light dark; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #0f1115;
-      color: #e8eaed;
-      text-align: center;
-      padding: 2rem;
-    }
-    .wrap { max-width: 32rem; }
-    .badge {
-      display: inline-block;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #9aa0a6;
-      border: 1px solid #2a2e35;
-      border-radius: 999px;
-      padding: 0.35rem 0.8rem;
-      margin-bottom: 1.5rem;
-    }
-    h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin: 0 0 0.75rem; letter-spacing: -0.02em; }
-    p { color: #9aa0a6; line-height: 1.6; margin: 0; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunya — the command centre that runs the whole advice business</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <span class="badge">Design stage · Private preview</span>
-    <h1>Bunya</h1>
-    <p>The official website is being designed. This staging page is a placeholder — the live design will appear here soon.</p>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-colour.png" alt="Bunya" class="logo-img"></a>
+    <button class="menu-btn" aria-label="Open menu" onclick="openMenu()">&#8801;</button>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <div class="nav-item">
+        <a>Platform <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="command-centre.html" class="dd-link"><span class="t">Command Centre</span><span class="d">The core platform that runs the practice</span></a>
+          <a href="broadcast-hq.html" class="dd-link"><span class="t">Broadcast HQ</span><span class="d">Compliant marketing, adviser to firm</span></a>
+          <a href="bunya-voice.html" class="dd-link"><span class="t">Bunya Voice</span><span class="d">Calls &amp; meetings, captured to the record</span></a>
+        </div>
+      </div>
+      <a href="grow.html">Grow</a>
+      <a href="partners.html">Partners</a>
+      <div class="nav-item">
+        <a>Resources <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="blog.html" class="dd-link"><span class="t">Insights</span><span class="d">Practical answers for principals</span></a>
+          <a href="faq.html" class="dd-link"><span class="t">FAQ</span><span class="d">The questions principals ask</span></a>
+          <a href="case-studies.html" class="dd-link"><span class="t">Case studies</span><span class="d">Real firms, running Bunya</span></a>
+          <a href="cost-calculator.html" class="dd-link"><span class="t">Cost calculator</span><span class="d">What the current way is costing you</span></a>
+          <div class="dd-sep"></div>
+          <a href="vs-traditional-crm.html" class="dd-link"><span class="t">Bunya vs a CRM</span><span class="d">Why it isn't just another CRM</span></a>
+          <a href="xplan-alternative.html" class="dd-link"><span class="t">Xplan alternative</span><span class="d">The alternative you own, not rent</span></a>
+          <a href="advice-software-alternatives.html" class="dd-link"><span class="t">Alternatives compared</span><span class="d">The whole field, side by side</span></a>
+          <a href="fin365-alternative.html" class="dd-link"><span class="t">Bunya vs Fin365</span><span class="d">The closest comparison, honestly</span></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a demo &#8594;</a>
+    </nav>
   </div>
+</header>
+<!-- FULL-SCREEN MOBILE MENU -->
+<div class="m-overlay" id="mMenu">
+  <div class="m-top">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></a>
+    <button class="m-close" aria-label="Close menu" onclick="closeMenu()">&#10005;</button>
+  </div>
+  <div class="m-scroll">
+    <div class="m-group">
+      <a href="index.html" class="top-link">Home</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Platform</div>
+      <a href="command-centre.html">Command Centre</a>
+      <a href="broadcast-hq.html">Broadcast HQ</a>
+      <a href="bunya-voice.html">Bunya Voice</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Grow</div>
+      <a href="grow.html">Grow your firm</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Resources</div>
+      <a href="blog.html">Insights</a>
+      <a href="faq.html">FAQ</a><a href="case-studies.html">Case studies</a>
+      <a href="cost-calculator.html">Cost calculator</a>
+      <a href="vs-traditional-crm.html">Bunya vs a CRM</a>
+      <a href="xplan-alternative.html">Xplan alternative</a>
+      <a href="advice-software-alternatives.html">Alternatives compared</a>
+      <a href="fin365-alternative.html">Bunya vs Fin365</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Company</div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="m-cta"><a href="contact.html">Book a demo &#8594;</a></div>
+</div>
+
+<a id="top"></a>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-split">
+      <div>
+        <p class="eyebrow">The operating system for financial advice firms</p>
+        <h1>The one system that runs your whole advice business.</h1>
+        <p class="lead" style="margin-top:1em">Bunya is a command centre built into your own Microsoft 365 &mdash; it runs every client review, the admin behind it, your advice documents, your revenue and your compliance, with a layer of AI skills on top. It replaces your CRM and the tangle of tools around it &mdash; and, when you're ready, grows the practice too. And you own it.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a demo <span class="arrow">&#8594;</span></a>
+          <a href="#whatis" class="btn btn-outline btn-lg">See what it does</a>
+        </div>
+        <div class="ticks">
+          <span>Runs the whole practice</span>
+          <span>Built on your Microsoft</span>
+          <span>Owned, not rented</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-photo"><span class="phlabel">Swap: adviser / practice photo</span><div class="plant"></div></div>
+        <div class="floatcard" aria-hidden="true">
+          <div class="fc-top"><span class="brandmini">Bunya</span><span class="search">The whole practice</span></div>
+          <div class="fc-greet"><div class="g">One screen. The whole business.</div><div class="s">Reviews, jobs, revenue and compliance &mdash; live.</div></div>
+          <div class="fc-rows">
+            <div class="fc-row"><span class="dot"></span> Review started &mdash; Nguyen Trust <span class="tag">Auto</span></div>
+            <div class="fc-row"><span class="dot"></span> SoA generated &mdash; Patel <span class="tag">1-click</span></div>
+            <div class="fc-row"><span class="dot"></span> BID audit passed &mdash; Okafor <span class="tag">Evidence</span></div>
+          </div>
+          <div class="fc-kpis">
+            <div class="fc-kpi"><div class="n">$4.2M</div><div class="l">Pipeline, live</div></div>
+            <div class="fc-kpi"><div class="n">1,014</div><div class="l">Reviews running</div></div>
+            <div class="fc-kpi"><div class="n">Yours</div><div class="l">In your tenancy</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="section tight section-pale">
+  <div class="container">
+    <div class="clients">
+      <span class="label">Trusted by Australian advice firms</span>
+      <span class="client-with-award"><span class="client-logo"><img src="assets/logos/regional-prosperity.png" alt="Regional Prosperity"></span><span class="award-flag">&#9733; Practice of the Year 2026</span></span>
+      <span class="client-logo"><img src="assets/logos/link-wealth.png" alt="Link Wealth Advice"></span>
+      <span class="client-logo stacked"><img src="assets/logos/falcon.png" alt="Falcon Financial Advisers"></span>
+    </div>
+    <p class="tech-line">Built on the Microsoft ecosystem you already run &mdash; <strong>Microsoft 365, Power Platform, Power BI, SharePoint &amp; Teams</strong></p>
+  </div>
+</section>
+
+<!-- THE SHIFT -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">The shift</p>
+    <h2 class="measure-narrow">Stop running your firm on a CRM plus fifteen other things.</h2>
+    <p class="lead measure" style="margin-top:.6em">Most advice firms hold the business together with a CRM, a stack of tools, and a lot of manual work in between. Bunya replaces the lot with one system &mdash; built to your firm, owned by you.</p>
+    <div class="shift">
+      <div class="shift-card was">
+        <div class="lbl">The way it works now</div>
+        <ul>
+          <li>A CRM that stores names but doesn't run the work</li>
+          <li>Reviews chased off spreadsheets</li>
+          <li>Advice documents built from scratch</li>
+          <li>Revenue reconciled by hand at month-end</li>
+          <li>Compliance evidence hunted down at audit</li>
+          <li>Software rented per seat, forever</li>
+        </ul>
+      </div>
+      <div class="shift-arrow">&#8594;</div>
+      <div class="shift-card now">
+        <div class="lbl">The way it works with Bunya</div>
+        <ul>
+          <li>One command centre that runs the whole business</li>
+          <li>Reviews that start themselves on real dates</li>
+          <li>A Statement of Advice in one click</li>
+          <li>Revenue live and current, projected vs actual</li>
+          <li>Audit-ready files, evidence kept as you go</li>
+          <li>Built once, owned outright, in your tenancy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT IS -->
+<section class="section section-pale" id="whatis">
+  <div class="container">
+    <div class="whatis">
+      <div>
+        <p class="eyebrow">What it is</p>
+        <h2>A custom-branded command centre, built on the Microsoft Power Platform.</h2>
+        <p class="lead" style="margin-top:.8em">Not another product you adopt. A system built to how your firm actually works &mdash; running every new-client and review journey, every task, every dollar of pipeline and actual revenue, with a layer of AI skills that draft the advice work from your own data.</p>
+        <p class="microcopy">The CRM is built in. It's everything around it, in one place, that makes it a command centre.</p>
+      </div>
+      <div class="whatis-cards">
+        <div class="wcard"><h4>Built on Power Platform</h4><p>A branded system over Power Platform and Power BI &mdash; the firm keeps full control of its own data.</p></div>
+        <div class="wcard"><h4>You own your data lake</h4><p>All client data stays inside your Microsoft ecosystem &mdash; SharePoint, Outlook, Teams &mdash; not a third party holding your customers.</p></div>
+        <div class="wcard"><h4>Replaces the old CRM stack</h4><p>A way off legacy CRM, workflow and review platforms &mdash; keeping only the minimum where a licensee still requires it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="section" id="who">
+  <div class="container">
+    <p class="eyebrow">Who it's for</p>
+    <h2 class="measure-narrow">One system. Three people it changes the day for.</h2>
+    <p class="lead measure" style="margin-top:.6em">It doesn't just help advisers. It gives the principal control and the compliance owner certainty &mdash; from the same source of truth.</p>
+    <div class="aud-grid">
+      <div class="aud">
+        <div class="who">The adviser &amp; team</div>
+        <h3>Less admin. More advice.</h3>
+        <p class="promise">The production comes off your plate, so your people go back to clients.</p>
+        <ul>
+          <li>Reviews that book and prepare themselves</li>
+          <li>One-click Statement of Advice &amp; fact find</li>
+          <li>Jobs that create and route themselves</li>
+          <li>AI skills that draft the work &mdash; you approve</li>
+        </ul>
+      </div>
+      <div class="aud">
+        <div class="who">The principal</div>
+        <h3>The whole firm, at a glance.</h3>
+        <p class="promise">A helicopter view of the business &mdash; no chasing, no status meetings.</p>
+        <ul>
+          <li>Live pipeline &amp; revenue, projected vs actual</li>
+          <li>Every file, task and turnaround time visible</li>
+          <li>Bottlenecks and workload, surfaced</li>
+          <li>Grow to the next tier without hiring in lockstep</li>
+        </ul>
+      </div>
+      <div class="aud">
+        <div class="who">Compliance &amp; risk</div>
+        <h3>Audit-ready, always.</h3>
+        <p class="promise">The evidence is kept as you go &mdash; not assembled in a panic.</p>
+        <ul>
+          <li>Checks against Best Interest Duty &amp; Code of Ethics</li>
+          <li>Service proven against every fee</li>
+          <li>Seven-year evidence trail, kept automatically</li>
+          <li>Audit handled by a secure link, not a fortnight</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE-CLICK FLAGSHIP -->
+<section class="section section-pale" id="oneclick">
+  <div class="container">
+    <p class="eyebrow">The part that stops advisers in their tracks</p>
+    <h2 class="measure-narrow">A fact find. A Statement of Advice. A Record of Advice. One click each.</h2>
+    <p class="lead measure" style="margin-top:.6em">Because every detail already lives in the command centre, the documents that eat the most time in an advice practice generate themselves &mdash; across the whole advice chain. An adviser always reviews and approves before anything reaches a client.</p>
+    <p class="lead" style="font-size:.92rem;margin-top:.9em;color:var(--grid);font-weight:600">All three live and in daily use at real advice practices &mdash; not a demo.</p>
+    <div class="oneclick-grid three">
+      <div class="oc-card">
+        <div class="oc-demo">
+          <div class="oc-row"><span class="oc-file">Client fact find</span><span class="oc-badge">Generated</span></div>
+          <div class="oc-bars"><i></i><i style="width:64%"></i><i></i></div>
+          <div class="oc-bars"><i style="width:80%"></i><i></i><i></i></div>
+          <div class="oc-foot"><span class="oc-click">&#9673; one click</span><span class="oc-human">Adviser confirms &#8594;</span></div>
+        </div>
+        <h3>One-click fact find</h3>
+        <p>No more re-collecting what you already know. A complete fact find assembles from the client's record and the latest review &mdash; ready to confirm, not rebuild.</p>
+      </div>
+      <div class="oc-card">
+        <div class="oc-demo">
+          <div class="oc-row"><span class="oc-file">Statement of Advice</span><span class="oc-badge">Generated</span></div>
+          <div class="oc-bars"><i></i><i></i><i></i><i style="width:70%"></i></div>
+          <div class="oc-bars"><i></i><i style="width:88%"></i><i></i></div>
+          <div class="oc-foot"><span class="oc-click">&#9673; one click</span><span class="oc-human">Adviser approves &#8594;</span></div>
+        </div>
+        <h3>One-click SoA</h3>
+        <p>Half a day of production, gone. The full Statement of Advice drafts itself from the data you already hold &mdash; then waits for an adviser's review.</p>
+      </div>
+      <div class="oc-card">
+        <div class="oc-demo">
+          <div class="oc-row"><span class="oc-file">Record of Advice</span><span class="oc-badge">Generated</span></div>
+          <div class="oc-bars"><i style="width:72%"></i><i></i><i></i></div>
+          <div class="oc-bars"><i></i><i style="width:84%"></i><i></i></div>
+          <div class="oc-foot"><span class="oc-click">&#9673; one click</span><span class="oc-human">Adviser approves &#8594;</span></div>
+        </div>
+        <h3>One-click RoA</h3>
+        <p>The high-volume one. Every review that ends in advice produces its Record of Advice on its own &mdash; the document your team churns out most, off their plate.</p>
+      </div>
+    </div>
+    <p class="lead" style="font-size:.95rem;margin-top:1.6em;color:var(--muted)">The one-click documents are the flagship of a whole <strong>skills engine</strong> &mdash; compliance audits, insurance needs analysis, strategy papers, fee calculators. Built to your firm's logic, and because it's your Microsoft environment, your firm can build its own.</p>
+  </div>
+</section>
+
+<!-- COMMAND CENTRE PORTAL -->
+<section class="section" id="ask">
+  <div class="container">
+    <p class="eyebrow">The part that stops advisers in their tracks</p>
+    <h2 class="measure-narrow">Just ask your practice to do it &mdash; and approve the result.</h2>
+    <p class="lead measure" style="margin-top:.6em">Tell the Command Centre what you want in plain English &mdash; "create the review job for the Patels," "update this client's details," "draft the recap" &mdash; and it does the work. Then it shows you exactly what it's about to change, and <strong>nothing is saved until you approve it</strong>. The speed of asking, without giving up control of what changes.</p>
+    <div class="portal-wrap">
+      <div>
+        <ul class="portal-points">
+          <li>Ask in plain English &mdash; create jobs, update records, draft documents</li>
+          <li>It reads your own data &mdash; SharePoint, Outlook, the client record</li>
+          <li>Every change is shown before it's made &mdash; you approve, then it saves</li>
+          <li>Honest about what it doesn't know &mdash; it never invents a name or a figure</li>
+          <li>Runs inside your own Microsoft 365 &mdash; your data never leaves</li>
+        </ul>
+        <p class="lead" style="font-size:.92rem;margin-top:1.4em;color:var(--grid);font-weight:600">Live and in daily use at real advice practices &mdash; not a demo.</p>
+      </div>
+      <div>
+        <div class="chatmock" aria-hidden="true">
+          <div class="cbar"><span class="dot"></span><span class="t">Command Centre &middot; Cowork</span><span class="st">&#9679; Live</span></div>
+          <div class="cbody">
+            <div class="bub user">Create the annual review job for the Patels and assign it to Tom.</div>
+            <div class="bub ai">Ready to create this &mdash; review here before I save:
+              <div class="mini-flow">
+                <div class="step"><span class="n">1</span> Job: Annual review &mdash; Patel</div>
+                <div class="step"><span class="n">2</span> Owner: Tom</div>
+                <div class="step"><span class="n">3</span> Due: aligned to their AAA date</div>
+              </div>
+              <span class="act">Approve to save &#8594;</span>
+            </div>
+            <div class="bub user">Approve.</div>
+            <div class="bub ai">Done &mdash; job created and assigned. Recorded that AI was used on this task.</div>
+          </div>
+          <div class="cinput"><span class="box">Ask your practice to do something&hellip;</span><span class="send">&#8593;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bunya Portal reassurance (demoted to supporting mention) -->
+    <div class="tieback" style="margin-top:clamp(32px,5vw,52px)">
+      <div>
+        <div class="k">And you're never left on your own</div>
+        <p>Owning your system doesn't mean going it alone. The <strong>Bunya Portal</strong> is your direct line to us &mdash; request help or a change, track your build, and reach your documentation, instead of emailing support tickets and waiting. Included with ongoing support.</p>
+      </div>
+      <a href="command-centre.html" class="btn btn-outline">Explore the Command Centre <span class="arrow">&#8594;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLATFORM / SUITE -->
+<section class="section" id="platform">
+  <div class="container">
+    <p class="eyebrow">One platform, built to grow</p>
+    <h2 class="measure-narrow">The Command Centre is the foundation. The rest plugs straight in.</h2>
+    <p class="lead measure" style="margin-top:.6em">Start with the core that runs your practice. Add the modules you need &mdash; each built for advice firms, each on the same foundation, in your own Microsoft 365. One system that keeps getting bigger, and you own every part.</p>
+    <div class="suite-diagram">
+      <div class="hub">
+        <div class="hub-inner">
+          <div class="hub-k">The platform</div>
+          <div class="hub-name">Command Centre</div>
+          <div class="hub-sub">CRM &middot; reviews &middot; jobs &middot; one-click fact find, SoA &amp; RoA &middot; revenue &middot; reporting &middot; compliance</div>
+        </div>
+      </div>
+      <div class="connector"></div>
+      <div class="spokes">
+        <a href="broadcast-hq.html" class="spoke">
+          <div class="spoke-tag">Module</div>
+          <h3>Broadcast HQ</h3>
+          <p>Turn one idea into a complete, compliant marketing campaign across every channel &mdash; with advisers posting inside firm-set guardrails.</p>
+          <span class="spoke-link">Explore Broadcast HQ &#8594;</span>
+        </a>
+        <a href="bunya-voice.html" class="spoke">
+          <div class="spoke-tag">Module</div>
+          <h3>Bunya Voice</h3>
+          <p>Business calling and Teams meetings, captured and filed automatically &mdash; so every client conversation feeds the record your reviews run on.</p>
+          <span class="spoke-link">Explore Bunya Voice &#8594;</span>
+        </a>
+        <a href="grow.html" class="spoke">
+          <div class="spoke-tag">Service</div>
+          <h3>Grow</h3>
+          <p>The growth arm: brand, website and SEO foundations plus a compliant content engine &mdash; so the firm people rarely hear of becomes the one they do.</p>
+          <span class="spoke-link">Explore Grow &#8594;</span>
+        </a>
+        <div class="spoke spoke-soon">
+          <div class="spoke-tag">Growing</div>
+          <h3>More to come</h3>
+          <p>The platform is built to extend. New modules land on the same foundation &mdash; you own every one.</p>
+        </div>
+      </div>
+    </div>
+    <p class="lead" style="font-size:.95rem;margin-top:1.6em;color:var(--muted)">Modules run as part of the Command Centre &mdash; not separate tools you stitch together. One login, one source of truth, one system you own.</p>
+  </div>
+</section>
+
+<!-- GROWTH BAND -->
+<section class="section">
+  <div class="container">
+    <div class="grow-band">
+      <div class="gb-grid">
+        <div>
+          <p class="eyebrow">And when you're ready to grow</p>
+          <h2>Become the advice firm people have actually heard of.</h2>
+          <p class="lead" style="margin-top:.8em">Here's the quiet truth of the industry: almost no advice firm markets itself consistently &mdash; too risky, too little time, too unsure where to start. Which is exactly why the few that do pull away. The same system that runs your practice can grow it too &mdash; brand, website, SEO and a compliant content engine, built to your firm and yours to own.</p>
+          <ul class="gb-list"><li>Brand &amp; website</li><li>SEO &amp; AI discoverability</li><li>Compliant content engine</li></ul>
+          <div class="btn-row" style="margin-top:1.8em"><a href="grow.html" class="btn btn-primary btn-lg">Explore Grow <span class="arrow">&#8594;</span></a></div>
+        </div>
+        <div>
+          <div class="gb-stat">
+            <div class="n">Run &amp; grow</div>
+            <div class="l">Most platforms stop at running the practice. Bunya runs it <em>and</em> grows it &mdash; one philosophy, one system you own.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ECOSYSTEM BAND -->
+<section class="section section-pale">
+  <div class="container">
+    <p class="eyebrow">Everything a growing firm needs</p>
+    <h2 class="measure-narrow">What we build, and who we trust for the rest.</h2>
+    <p class="lead measure" style="margin-top:.6em">Bunya runs and grows your practice on systems you own. For the specialist needs beyond that, we connect you to partners we'd stake our name on &mdash; starting with succession and business value.</p>
+    <div class="eco-band">
+      <div class="eco-pillar owned">
+        <div class="tag">We build &amp; you own</div>
+        <h3>Operate</h3>
+        <p>The Command Centre and Bunya Voice &mdash; the system that runs the whole practice, built to your firm.</p>
+      </div>
+      <div class="eco-pillar owned">
+        <div class="tag">We build &amp; you own</div>
+        <h3>Grow</h3>
+        <p>Brand, website, SEO and a compliant content engine &mdash; so the firm people rarely hear of becomes the one they do.</p>
+      </div>
+      <div class="eco-pillar partner">
+        <div class="tag">A partner we trust</div>
+        <h3>Succession &amp; Value</h3>
+        <p>Make the firm worth more and able to run without you &mdash; through Adapt, the owner-independence specialists we partner with. <a href="partners.html" style="color:var(--grid);font-weight:600">Meet our partners &#8594;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="section section-pale" id="proof">
+  <div class="container">
+    <p class="eyebrow">Proven, not promised</p>
+    <h2 class="measure-narrow">Already running real advice businesses &mdash; including this year's Practice of the Year.</h2>
+    <p class="lead measure" style="margin-top:.4em;margin-bottom:0">In September 2026, Regional Prosperity was named Practice of the Year across its whole network &mdash; and it runs on Bunya.</p>
+    <div class="proof-video">
+      <div>
+        <div class="video-embed" onclick="playVideo(this)" data-embed="">
+          <span class="swaptag">Swap: short clip URL</span>
+          <div class="poster">
+            <div class="play"><svg viewBox="0 0 24 24" fill="#0A2A2E"><path d="M8 5v14l11-7z"/></svg></div>
+            <div class="vlabel">Hear it from a firm running Bunya</div>
+            <div class="vsub">30&ndash;60 sec highlight</div>
+          </div>
+        </div>
+        <p class="video-caption">Swap in a short highlight cut (Vimeo/YouTube). Full versions live on the case study pages.</p>
+      </div>
+      <div>
+        <p class="eyebrow">In their words</p>
+        <h2 style="font-size:clamp(1.4rem,2.6vw,1.9rem)">"The relief was the part we underestimated."</h2>
+        <p class="lead" style="margin-top:.6em">A practice that came to us stretched, and got its week back. Watch the short version here &mdash; or read the full story.</p>
+        <div class="btn-row"><a href="case-study-falcon.html" class="btn btn-outline">Read the Falcon story <span class="arrow">&#8594;</span></a><a href="case-studies.html" class="btn btn-ghost-dark" style="border:none;color:var(--grid);font-weight:600">All case studies &#8594;</a></div>
+      </div>
+    </div>
+    <div class="showcase">
+      <div class="photo">
+        <span class="phlabel">Swap: happy adviser photo</span>
+        <div class="qcard">
+          <div class="mark">&ldquo;</div>
+          <p>Bunya gave us back hours every week. The team's more focused, and the business just runs smoother.</p>
+          <div class="nm">Falcon Financial</div>
+          <div class="rl">Advice practice &middot; placeholder quote, pending sign-off</div>
+        </div>
+      </div>
+      <div class="copy">
+        <p class="eyebrow">Built for adviser businesses</p>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.1rem)">A system that understands your world.</h2>
+        <p class="lead" style="margin-top:.8em">The same workflow, CRM, reporting and AI setup is already built and running in a live advice practice &mdash; walked through, adapted to your firm, and supported after go-live.</p>
+        <div class="stattrio">
+          <div class="statx"><div class="n">Live</div><div class="l">running advice firms today</div></div>
+          <div class="statx"><div class="n">Own it</div><div class="l">perpetual, your tenancy</div></div>
+          <div class="statx"><div class="n">~6 wk</div><div class="l">guided build to go-live</div></div>
+        </div>
+        <p class="lead" style="font-size:.84rem;margin-top:1.4em;color:var(--muted)">Reference practices available on request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS + GUARANTEE -->
+<section class="section" id="how">
+  <div class="container">
+    <p class="eyebrow">How it works</p>
+    <h2 class="measure-narrow">A guided build &mdash; not a drop-and-run product.</h2>
+    <p class="lead measure" style="margin-top:.6em">You see it working on your own data before you commit, then we build it with you, then it's yours.</p>
+    <div class="timeline">
+      <div class="tstep"><div class="wk">STEP 1</div><h3>Blueprint</h3><p>A clickable model of your practice on your real data. Credited if you build &mdash; yours to keep if you don't.</p></div>
+      <div class="tstep"><div class="wk">STEP 2</div><h3>Guided build</h3><p>Roughly six weeks, built with your input and adapted to your firm as it's constructed.</p></div>
+      <div class="tstep"><div class="wk">STEP 3</div><h3>Run-in</h3><p>A side-by-side period as work moves across &mdash; the hands-on transition that drives real team buy-in.</p></div>
+      <div class="tstep"><div class="wk">STEP 4</div><h3>Live &amp; owned</h3><p>Go live with ongoing support and a tailored training library on your own system. The system is yours, in your tenancy, for good.</p></div>
+    </div>
+    <div class="guarantee-band">
+      <div>
+        <p class="eyebrow">Taking the risk off the table</p>
+        <h3>You've been burned once. We don't ask you to trust a demo.</h3>
+        <p>You experience the system on your own practice before the real commitment begins &mdash; and the Blueprint is credited if you proceed, yours if you don't.</p>
+      </div>
+      <div class="gbox">
+        <ul>
+          <li>See it on your own data first</li>
+          <li>Blueprint credited in full if you build</li>
+          <li>Payment staged across delivery</li>
+          <li>Built and proven in a live practice</li>
+          <li>Tailored training library so the team adopts it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-pale">
+  <div class="container-narrow">
+    <p class="eyebrow center" style="text-align:center">Honest answers</p>
+    <h2 class="center mx-auto" style="max-width:18ch">The questions every principal asks.</h2>
+    <div class="faq">
+      <details open><summary>Do we still need our CRM &mdash; or does this replace it?</summary><p>The command centre has a CRM built in &mdash; client records, contacts and history sit at its core. For most firms it replaces the standalone CRM and the tools bolted around it; where it makes sense, it can run alongside one you want to keep. Either way, you're consolidating the CRM and everything around it into one system you own.</p></details>
+      <details><summary>We've been burned by a platform before. How is this different?</summary><p>You see it working on your own data before you commit to a build. The Blueprint is a clickable model of your practice &mdash; your dates, your jobs, your numbers. You decide to build after you've used it, not before. And you keep the Blueprint either way.</p></details>
+      <details><summary>Is it really "one click" for a Statement of Advice?</summary><p>Yes &mdash; because the data already lives in the system, a full SoA (or fact find) generates from a single action. It's live and in daily use at real practices. A human always reviews and approves before anything reaches a client: AI drafts, a person decides.</p></details>
+      <details><summary>Isn't a custom build more expensive than software we subscribe to?</summary><p>It's a different shape, not a bigger number. A 1,000-client practice already spends over $4M a year to serve clients. A one-off build is a fraction of that &mdash; and unlike a per-seat subscription you pay forever and never own, the platform is yours permanently, in your own tenancy. <a href="cost-calculator.html" style="color:var(--grid);font-weight:600">See what the current way is costing you &#8594;</a></p></details>
+      <details><summary>Where does our data live, and who can see it?</summary><p>Inside your own Microsoft 365 &mdash; SharePoint, Outlook, Teams. Your client data stays in your ecosystem under your governance, rather than a third party holding it. Staying inside Microsoft is exactly what unlocks the AI skills, too.</p></details>
+      <details><summary>Does the AI make decisions for our advisers?</summary><p>No. AI drafts, a human approves, the system records both. Every skill runs to approval gates &mdash; nothing is sent, filed or changed without a person saying so.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-deep">
+      <img class="lattice" src="assets/pinecone-white.png" alt="" aria-hidden="true">
+      <p class="eyebrow">Ready to see it?</p>
+      <h2>See the command centre run your practice.</h2>
+      <p class="lead" style="margin-top:.6em">Start with the free 90-second check to see where your firm stands &mdash; or book a demo and we'll walk you through the working system on your own data.</p>
+      <div class="btn-row">
+        <a href="contact.html#check" class="btn btn-primary btn-lg">Run the free check <span class="arrow">&#8594;</span></a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg">Book a demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container">
+    <div class="fcols">
+      <div>
+        <div class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></div>
+        <p class="tagline">The command centre advice firms own. Built on Microsoft, in your tenancy, to your firm's way of working.</p>
+      </div>
+      <div><h4>Platform</h4><a href="command-centre.html">Command Centre</a><a href="broadcast-hq.html">Broadcast HQ</a><a href="bunya-voice.html">Bunya Voice</a></div>
+      <div><h4>Resources</h4><a href="cost-calculator.html">Cost calculator</a><a href="vs-traditional-crm.html">Bunya vs a CRM</a><a href="xplan-alternative.html">Xplan alternative</a><a href="advice-software-alternatives.html">Alternatives compared</a><a href="faq.html">FAQ</a><a href="blog.html">Insights</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div><h4>Get started</h4><a href="contact.html#check">Run the free check</a><a href="contact.html">Book a demo</a></div>
+    </div>
+    <div class="fine"><span>&copy; 2026 Bunya. The operating system for Australian financial advice firms.</span><span>Australia &middot; Power Platform delivery</span></div>
+  </div>
+</footer>
+
+<script>
+function openMenu(){document.getElementById('mMenu').classList.add('open');document.body.classList.add('menu-open');}
+function closeMenu(){document.getElementById('mMenu').classList.remove('open');document.body.classList.remove('menu-open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+</script>
+<script>
+function playVideo(el){var src=el.getAttribute('data-embed');if(!src){return;}el.innerHTML='<iframe src="'+src+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';}
+</script>
 </body>
 </html>

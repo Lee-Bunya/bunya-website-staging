@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is the current way costing you? — Bunya ROI calculator</title>
+<meta name="description" content="Put in your own numbers and see what running an advice practice the old way costs each year — the software, the admin time, and the hire to grow. Free, no signup.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-colour.png" alt="Bunya" class="logo-img"></a>
+    <button class="menu-btn" aria-label="Open menu" onclick="openMenu()">&#8801;</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-item">
+        <a>Platform <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="command-centre.html" class="dd-link"><span class="t">Command Centre</span><span class="d">The core platform that runs the practice</span></a>
+          <a href="broadcast-hq.html" class="dd-link"><span class="t">Broadcast HQ</span><span class="d">Compliant marketing, adviser to firm</span></a>
+          <a href="bunya-voice.html" class="dd-link"><span class="t">Bunya Voice</span><span class="d">Calls &amp; meetings, captured to the record</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a>Resources <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="blog.html" class="dd-link"><span class="t">Insights</span><span class="d">Practical answers for principals</span></a>
+          <a href="faq.html" class="dd-link"><span class="t">FAQ</span><span class="d">The questions principals ask</span></a>
+          <a href="case-studies.html" class="dd-link"><span class="t">Case studies</span><span class="d">Real firms, running Bunya</span></a>
+          <a href="cost-calculator.html" class="dd-link"><span class="t">Cost calculator</span><span class="d">What the current way is costing you</span></a>
+          <div class="dd-sep"></div>
+          <a href="vs-traditional-crm.html" class="dd-link"><span class="t">Bunya vs a CRM</span><span class="d">Why it isn't just another CRM</span></a>
+          <a href="xplan-alternative.html" class="dd-link"><span class="t">Xplan alternative</span><span class="d">The alternative you own, not rent</span></a>
+          <a href="advice-software-alternatives.html" class="dd-link"><span class="t">Alternatives compared</span><span class="d">The whole field, side by side</span></a>
+          <a href="fin365-alternative.html" class="dd-link"><span class="t">Bunya vs Fin365</span><span class="d">The closest comparison, honestly</span></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Book a demo &#8594;</a>
+    </nav>
+  </div>
+</header>
+<!-- FULL-SCREEN MOBILE MENU -->
+<div class="m-overlay" id="mMenu">
+  <div class="m-top">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></a>
+    <button class="m-close" aria-label="Close menu" onclick="closeMenu()">&#10005;</button>
+  </div>
+  <div class="m-scroll">
+    <div class="m-group">
+      <a href="index.html" class="top-link">Home</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Platform</div>
+      <a href="command-centre.html">Command Centre</a>
+      <a href="broadcast-hq.html">Broadcast HQ</a>
+      <a href="bunya-voice.html">Bunya Voice</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Grow</div>
+      <a href="grow.html">Grow your firm</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Resources</div>
+      <a href="blog.html">Insights</a>
+      <a href="faq.html">FAQ</a><a href="case-studies.html">Case studies</a>
+      <a href="cost-calculator.html">Cost calculator</a>
+      <a href="vs-traditional-crm.html">Bunya vs a CRM</a>
+      <a href="xplan-alternative.html">Xplan alternative</a>
+      <a href="advice-software-alternatives.html">Alternatives compared</a>
+      <a href="fin365-alternative.html">Bunya vs Fin365</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Company</div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="m-cta"><a href="contact.html">Book a demo &#8594;</a></div>
+</div>
+
+<!-- HOOK -->
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Cost calculator</p>
+    <span class="modtag"><span class="dot"></span> The cost of "without"</span>
+    <h1 class="measure">What is running your practice the old way costing you?</h1>
+    <p class="lead measure" style="margin-top:1em">Not a quote &mdash; a mirror. Put in your own numbers and see what the current model costs every year across the three places it hides: the software you rent, the admin time you burn, and the hire you'd need to grow the manual way. Every assumption is yours to change.</p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="calc-grid">
+      <!-- INPUTS -->
+      <div>
+        <div class="calc-panel">
+          <h3>Your practice</h3>
+          <p class="csub">The basics. Rough is fine.</p>
+          <div class="crow"><label>Client groups on ongoing advice <span class="v" id="cgV">1,000</span></label><input type="range" id="cg" min="100" max="2500" step="50" value="1000" oninput="calc()"><div class="chint">Drives review volume and admin load.</div></div>
+          <div class="crow"><label>Support / admin staff <span class="v" id="stV">30</span></label><input type="range" id="st" min="1" max="60" step="1" value="30" oninput="calc()"><div class="chint">People whose day is production &amp; task execution.</div></div>
+          <div class="crow"><label>Loaded cost per support staff / year <span class="cassume">edit</span></label><div class="cnum"><span class="pre">$</span><input type="number" id="cost" value="75000" oninput="calc()"></div><div class="chint">Salary plus on-costs. Conservative default $75k.</div></div>
+        </div>
+        <div class="calc-panel" style="margin-top:20px">
+          <h3>Software you could switch off <span class="cassume">your real bills</span></h3>
+          <p class="csub">Monthly cost of tools the command centre absorbs. Use your actual figures &mdash; the most undeniable numbers here.</p>
+          <div class="crow"><label>CRM &amp; workflow platform <span class="v" id="s1V">$1,200/mo</span></label><input type="range" id="s1" min="0" max="8000" step="100" value="1200" oninput="calc()"></div>
+          <div class="crow"><label>Review / scheduling / task tools <span class="v" id="s2V">$400/mo</span></label><input type="range" id="s2" min="0" max="4000" step="50" value="400" oninput="calc()"></div>
+          <div class="crow"><label>AI note-taker &amp; file-note tools <span class="v" id="s3V">$600/mo</span></label><input type="range" id="s3" min="0" max="4000" step="50" value="600" oninput="calc()"></div>
+          <div class="crow"><label>Reporting / other subscriptions <span class="v" id="s4V">$500/mo</span></label><input type="range" id="s4" min="0" max="4000" step="50" value="500" oninput="calc()"></div>
+        </div>
+        <div class="calc-panel" style="margin-top:20px">
+          <h3>Assumptions <span class="cassume">conservative</span></h3>
+          <p class="csub">The softer figures. Dial them to what feels true for your firm.</p>
+          <div class="crow"><label>Admin hours per review cycle <span class="v" id="hrV">3.0</span></label><input type="range" id="hr" min="0.5" max="8" step="0.5" value="3" oninput="calc()"><div class="chint">Booking, prep, forms, recap &mdash; per client, per year.</div></div>
+          <div class="crow"><label>Share of that time Bunya removes <span class="v" id="rmV">60%</span></label><input type="range" id="rm" min="20" max="90" step="5" value="60" oninput="calc()"><div class="chint">The automatable production portion.</div></div>
+        </div>
+      </div>
+      <!-- RESULT -->
+      <div>
+        <div class="cresult">
+          <div class="k">Your annual cost of "without"</div>
+          <div class="big" id="totalN">$0<small>Every year, on what Bunya replaces</small></div>
+          <div class="cbreak">
+            <div class="cbline"><span class="l">Software you could cancel</span><span class="n" id="swN">$0</span></div>
+            <div class="cbline"><span class="l">Admin production time recoverable</span><span class="n" id="timeN">$0</span></div>
+            <div class="cbline"><span class="l">The extra hire to grow the manual way</span><span class="n" id="hireN">$0</span></div>
+            <div class="cbline tot"><span class="l">Total, per year</span><span class="n" id="grandN">$0</span></div>
+          </div>
+          <div class="cpayback" id="payback"></div>
+          <a href="contact.html" class="cta">See your exact payback on a call &#8594;</a>
+        </div>
+        <p class="cdisc" id="disc"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POST-RESULT CTA -->
+<section class="section section-deep">
+  <div class="container center">
+    <p class="eyebrow mx-auto" style="text-align:center">You've seen the cost. Now see the fix.</p>
+    <h2 class="mx-auto" style="max-width:22ch">Bunya replaces the subscriptions, removes the production time, and lets you grow without the hire.</h2>
+    <p class="lead mx-auto measure" style="margin-top:1em">One system, built to your firm, in your own Microsoft 365 &mdash; and you own it. Book a demo and we'll show you the exact numbers for your practice, on your own data.</p>
+    <div class="btn-row" style="justify-content:center"><a href="contact.html" class="btn btn-primary btn-lg">Book a demo <span class="arrow">&#8594;</span></a><a href="contact.html#check" class="btn btn-outline-light btn-lg">Run the free check</a></div>
+  </div>
+</section>
+
+<!-- TWO TOOLS -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Two ways to see where you stand</p>
+    <div class="calc-grid" style="margin-top:1.6em">
+      <div class="calc-panel"><h3>This calculator &mdash; the money</h3><p class="csub" style="margin-bottom:0">What the current model costs in dollars: software, time and hiring. Best when you're weighing the investment.</p></div>
+      <div class="calc-panel"><h3>The free check &mdash; the exposure</h3><p class="csub" style="margin-bottom:1em">A 90-second read on reclaimable time and where you're exposed on compliance. Best when you're not sure it's a problem yet.</p><a href="contact.html#check" class="btn btn-ghost-dark" style="font-size:.9rem;padding:11px 20px">Run the free check &#8594;</a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container">
+    <div class="fcols">
+      <div>
+        <div class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></div>
+        <p class="tagline">The command centre advice firms own. Built on Microsoft, in your tenancy, to your firm's way of working.</p>
+      </div>
+      <div><h4>Platform</h4><a href="command-centre.html">Command Centre</a><a href="broadcast-hq.html">Broadcast HQ</a><a href="bunya-voice.html">Bunya Voice</a><a href="grow.html">Grow</a>
+      <a href="partners.html">Partners</a></div>
+      <div><h4>Resources</h4><a href="cost-calculator.html">Cost calculator</a><a href="vs-traditional-crm.html">Bunya vs a CRM</a><a href="xplan-alternative.html">Xplan alternative</a><a href="advice-software-alternatives.html">Alternatives compared</a><a href="faq.html">FAQ</a><a href="blog.html">Insights</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div><h4>Get started</h4><a href="contact.html#check">Run the free check</a><a href="contact.html">Book a demo</a></div>
+    </div>
+    <div class="fine"><span>&copy; 2026 Bunya. The operating system for Australian financial advice firms.</span><span>Australia &middot; Power Platform delivery</span></div>
+  </div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const money=n=>'$'+Math.round(n).toLocaleString();
+function calc(){
+  const cg=+$('cg').value, cost=+$('cost').value||0;
+  const s1=+$('s1').value,s2=+$('s2').value,s3=+$('s3').value,s4=+$('s4').value;
+  const hr=+$('hr').value, rm=+$('rm').value/100;
+  $('cgV').textContent=cg.toLocaleString();$('stV').textContent=+$('st').value;
+  $('s1V').textContent=money(s1)+'/mo';$('s2V').textContent=money(s2)+'/mo';$('s3V').textContent=money(s3)+'/mo';$('s4V').textContent=money(s4)+'/mo';
+  $('hrV').textContent=hr.toFixed(1);$('rmV').textContent=(rm*100)+'%';
+  const software=(s1+s2+s3+s4)*12;
+  const hourly=cost/1950;
+  const timeSaved=cg*hr*rm*hourly;
+  const hire=cost;
+  const grand=software+timeSaved+hire;
+  $('swN').textContent=money(software);$('timeN').textContent=money(timeSaved);$('hireN').textContent=money(hire);
+  $('grandN').textContent=money(grand);
+  $('totalN').innerHTML=money(grand)+'<small>Every year, on what Bunya replaces</small>';
+  $('payback').innerHTML='On this alone, a Bunya build typically <b>pays for itself within the first year</b> &mdash; then it\'s yours, in your own tenancy, with no per-seat rent. We\'ll show you the exact figure for your firm on a call.';
+  $('disc').textContent='Indicative only, based on the numbers you enter and conservative industry assumptions (loaded staff cost, admin hours per review cycle). The software figure uses your own subscription costs and is the most precise line. This estimates the annual cost of the current model; it is not a quote. Your exact investment and payback are confirmed on a call and, if you proceed, in a Blueprint on your own data. AUD, ex GST.';
+}
+calc();
+</script>
+<script>
+function openMenu(){document.getElementById('mMenu').classList.add('open');document.body.classList.add('menu-open');}
+function closeMenu(){document.getElementById('mMenu').classList.remove('open');document.body.classList.remove('menu-open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+</script>
+</body>
+</html>

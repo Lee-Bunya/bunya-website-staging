@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Bunya</title>
+<meta name="description" content="Bunya builds a custom command centre for financial advice firms on the Microsoft Power Platform — the system a firm would build for itself, owned by the firm.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-colour.png" alt="Bunya" class="logo-img"></a>
+    <button class="menu-btn" aria-label="Open menu" onclick="openMenu()">&#8801;</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-item">
+        <a>Platform <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="command-centre.html" class="dd-link"><span class="t">Command Centre</span><span class="d">The core platform that runs the practice</span></a>
+          <a href="broadcast-hq.html" class="dd-link"><span class="t">Broadcast HQ</span><span class="d">Compliant marketing, adviser to firm</span></a>
+          <a href="bunya-voice.html" class="dd-link"><span class="t">Bunya Voice</span><span class="d">Calls &amp; meetings, captured to the record</span></a>
+        </div>
+      </div>
+      <a href="grow.html">Grow</a>
+      <a href="partners.html">Partners</a>
+      <div class="nav-item">
+        <a>Resources <svg class="caret" viewBox="0 0 12 12" fill="none"><path d="M2 4 L6 8 L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="dropdown">
+          <a href="blog.html" class="dd-link"><span class="t">Insights</span><span class="d">Practical answers for principals</span></a>
+          <a href="faq.html" class="dd-link"><span class="t">FAQ</span><span class="d">The questions principals ask</span></a>
+          <a href="case-studies.html" class="dd-link"><span class="t">Case studies</span><span class="d">Real firms, running Bunya</span></a>
+          <a href="cost-calculator.html" class="dd-link"><span class="t">Cost calculator</span><span class="d">What the current way is costing you</span></a>
+          <div class="dd-sep"></div>
+          <a href="vs-traditional-crm.html" class="dd-link"><span class="t">Bunya vs a CRM</span><span class="d">Why it isn't just another CRM</span></a>
+          <a href="xplan-alternative.html" class="dd-link"><span class="t">Xplan alternative</span><span class="d">The alternative you own, not rent</span></a>
+          <a href="advice-software-alternatives.html" class="dd-link"><span class="t">Alternatives compared</span><span class="d">The whole field, side by side</span></a>
+          <a href="fin365-alternative.html" class="dd-link"><span class="t">Bunya vs Fin365</span><span class="d">The closest comparison, honestly</span></a>
+        </div>
+      </div>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html" class="nav-cta">Book a demo &#8594;</a>
+    </nav>
+  </div>
+</header>
+<!-- FULL-SCREEN MOBILE MENU -->
+<div class="m-overlay" id="mMenu">
+  <div class="m-top">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></a>
+    <button class="m-close" aria-label="Close menu" onclick="closeMenu()">&#10005;</button>
+  </div>
+  <div class="m-scroll">
+    <div class="m-group">
+      <a href="index.html" class="top-link">Home</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Platform</div>
+      <a href="command-centre.html">Command Centre</a>
+      <a href="broadcast-hq.html">Broadcast HQ</a>
+      <a href="bunya-voice.html">Bunya Voice</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Grow</div>
+      <a href="grow.html">Grow your firm</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Resources</div>
+      <a href="blog.html">Insights</a>
+      <a href="faq.html">FAQ</a><a href="case-studies.html">Case studies</a>
+      <a href="cost-calculator.html">Cost calculator</a>
+      <a href="vs-traditional-crm.html">Bunya vs a CRM</a>
+      <a href="xplan-alternative.html">Xplan alternative</a>
+      <a href="advice-software-alternatives.html">Alternatives compared</a>
+      <a href="fin365-alternative.html">Bunya vs Fin365</a>
+    </div>
+    <div class="m-group">
+      <div class="m-h">Company</div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="m-cta"><a href="contact.html">Book a demo &#8594;</a></div>
+</div>
+
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-split">
+      <div>
+        <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</p>
+        <span class="modtag"><span class="dot"></span> About Bunya</span>
+        <h1>We build the system an advice firm would build for itself.</h1>
+        <p class="lead" style="margin-top:1em">Most software for advice firms is built by technologists looking in from the outside. Bunya is built from an understanding of how the work actually moves through a practice &mdash; the reviews, the jobs, the revenue, the compliance &mdash; and what it costs when all of it runs on people remembering to do it.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary btn-lg">Talk to us <span class="arrow">&#8594;</span></a>
+          <a href="command-centre.html" class="btn btn-outline btn-lg">See the platform</a>
+        </div>
+      </div>
+      <div>
+        <div class="mission-card">
+          <div class="mk">&ldquo;</div>
+          <div class="stmt">An advice firm should be able to grow without hiring in lockstep &mdash; on a system it owns, not one it rents forever.</div>
+          <div class="attrib">The belief Bunya is built on</div>
+          <div class="glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY WE EXIST -->
+<section class="section section-pale">
+  <div class="container">
+    <div class="whatis">
+      <div>
+        <p class="eyebrow">Why we exist</p>
+        <h2>The ceiling was always headcount.</h2>
+        <p class="lead" style="font-size:1.1rem;color:var(--focus);margin-top:1em">For as long as anyone can remember, an advice firm grew one way: by adding people. More clients meant more advisers, associates and admin &mdash; so the firm's ceiling was set by how many people it could hire and hold.</p>
+      </div>
+      <div>
+        <p style="color:var(--muted)">That model is breaking. Demand for advice has never been higher, and the number of advisers has stopped growing. Firms are being asked to serve more people, to a higher standard, with tighter compliance &mdash; and the old answer, "hire someone," no longer works when the people aren't there and every hire adds cost and management load.</p>
+        <p style="margin-top:1em;color:var(--muted)">We started Bunya because we kept seeing the same thing: good firms capped not by ambition or demand, but by how much work their people could physically carry. The tools they had &mdash; a CRM here, a dozen point solutions around it, spreadsheets filling the gaps &mdash; sped up individual tasks but never carried the work. So growth stayed tied to headcount.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE SHIFT -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">The shift we're built for</p>
+    <h2 class="measure-narrow">From a firm that hires to grow, to a firm whose system carries the work.</h2>
+    <p class="lead measure" style="margin-top:.6em">The firms that thrive from here won't be the ones that hire fastest. They'll be the ones whose systems do the production &mdash; so more clients don't mean proportionally more staff.</p>
+    <div class="shift-grid">
+      <div class="shift-card was">
+        <div class="k">The old model</div>
+        <h3>Growth tied to headcount</h3>
+        <ul>
+          <li>More clients means the next admin hire</li>
+          <li>A CRM plus a tangle of tools around it</li>
+          <li>Reviews and advice run on people remembering</li>
+          <li>Compliance evidence assembled in a scramble</li>
+          <li>The software is rented; you never own it</li>
+        </ul>
+      </div>
+      <div class="shift-arrow">&#8594;</div>
+      <div class="shift-card now">
+        <div class="k">What we build</div>
+        <h3>Growth carried by the system</h3>
+        <ul>
+          <li>The next tier reached on the same team</li>
+          <li>One connected system, built to your firm</li>
+          <li>Reviews and advice production that run themselves</li>
+          <li>Compliance evidence kept as the work happens</li>
+          <li>Built in your Microsoft &mdash; and yours to own</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT STATS -->
+<section class="section section-deep">
+  <div class="container">
+    <div class="stattrio" style="max-width:900px;margin:0 auto">
+      <div class="statx"><div class="n" style="color:var(--pulse)">~15k</div><div class="l" style="color:rgba(255,255,255,.8)">advisers left in Australia &mdash; and no longer growing</div></div>
+      <div class="statx"><div class="n" style="color:var(--pulse)">Millions</div><div class="l" style="color:rgba(255,255,255,.8)">of Australians who need advice and can't easily get it</div></div>
+      <div class="statx"><div class="n" style="color:var(--pulse)">One</div><div class="l" style="color:rgba(255,255,255,.8)">system that should run it all &mdash; built to your firm</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BELIEVE -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">What we believe</p>
+    <h2 class="measure-narrow">The principles behind everything we build.</h2>
+    <div class="belief-grid">
+      <div class="belief"><div class="bn">01</div><h3>You should own your system</h3><p>Everything is built in your own Microsoft 365 and licensed to you perpetually. We'd rather earn ongoing support by being useful than lock you in by holding the switch. Rented software stops the day you stop paying; an owned system is an asset.</p></div>
+      <div class="belief"><div class="bn">02</div><h3>AI drafts; a human decides</h3><p>The system removes the manual production step in front of advice, compliance and client care &mdash; but never the human judgement or accountability behind them. Every meaningful action is shown, and approved, before it counts.</p></div>
+      <div class="belief"><div class="bn">03</div><h3>Built to your firm, not configured</h3><p>Your processes are a competitive asset. We build the system around how your firm actually works, rather than bending your firm to fit a product. The result is one system that fits, not ten that almost do.</p></div>
+      <div class="belief"><div class="bn">04</div><h3>Proof over demos</h3><p>We'd rather build a working model of your practice on your real data than talk you through a demo of someone else's. The proof is the thing running &mdash; which is why we show it before you commit.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE'RE FOR -->
+<section class="section section-pale">
+  <div class="container">
+    <div class="whatis">
+      <div><p class="eyebrow">Who we're for</p><h2>Firms that have outgrown "somewhere to store clients."</h2></div>
+      <div>
+        <p class="lead" style="font-size:1.12rem;color:var(--focus)">Bunya is for established and growing Australian advice practices &mdash; the firms carrying real client volume, real compliance weight, and real ambition to grow without simply adding people.</p>
+        <p style="margin-top:1em;color:var(--muted)">If a clean CRM is all you need, there are good ones, and we'll happily say so. We're for the firms that want the reviews, the admin, the advice production, the revenue and the compliance running as one system they own &mdash; and, when they're ready, the marketing that grows the practice too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST NOTE -->
+<section class="section">
+  <div class="container">
+    <div class="tieback">
+      <div><div class="k">One honest thing we say upfront</div><p>The hard part is the revenue data &mdash; source files are messy, and getting them clean is real work. We flag it at the start of every engagement, because a system that promises automatic reconciliation on dirty data is promising something it can't deliver. We'd rather be honest about the effort than oversell the ease.</p></div>
+      <a href="contact.html" class="btn btn-primary">Talk to us <span class="arrow">&#8594;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-pale">
+  <div class="container">
+    <div class="cta-deep">
+      <img class="lattice" src="assets/pinecone-white.png" alt="" aria-hidden="true">
+      <p class="eyebrow">See it for yourself</p>
+      <h2>See what it would do for your practice.</h2>
+      <p class="lead" style="margin-top:.6em">Start with the free 90-second check, or book a demo and we'll walk you through the working system on your own data.</p>
+      <div class="btn-row"><a href="contact.html#check" class="btn btn-primary btn-lg">Run the free check <span class="arrow">&#8594;</span></a><a href="contact.html" class="btn btn-outline-light btn-lg">Book a demo</a></div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site">
+  <div class="container">
+    <div class="fcols">
+      <div>
+        <div class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img"></div>
+        <p class="tagline">The command centre advice firms own. Built on Microsoft, in your tenancy, to your firm's way of working.</p>
+      </div>
+      <div><h4>Platform</h4><a href="command-centre.html">Command Centre</a><a href="broadcast-hq.html">Broadcast HQ</a><a href="bunya-voice.html">Bunya Voice</a></div>
+      <div><h4>Resources</h4><a href="cost-calculator.html">Cost calculator</a><a href="vs-traditional-crm.html">Bunya vs a CRM</a><a href="xplan-alternative.html">Xplan alternative</a><a href="advice-software-alternatives.html">Alternatives compared</a><a href="faq.html">FAQ</a><a href="blog.html">Insights</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+      <div><h4>Get started</h4><a href="contact.html#check">Run the free check</a><a href="contact.html">Book a demo</a></div>
+    </div>
+    <div class="fine"><span>&copy; 2026 Bunya. The operating system for Australian financial advice firms.</span><span>Australia &middot; Power Platform delivery</span></div>
+  </div>
+</footer>
+<script>
+function openMenu(){document.getElementById('mMenu').classList.add('open');document.body.classList.add('menu-open');}
+function closeMenu(){document.getElementById('mMenu').classList.remove('open');document.body.classList.remove('menu-open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+</script>
+</body>
+</html>
