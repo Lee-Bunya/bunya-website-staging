@@ -35,7 +35,7 @@
         </div>
       </div>
       <a href="about.html">About</a>
-      <a href="contact.html" class="nav-cta">Book a demo &#8594;</a>
+      <a href="booking.html" class="nav-cta">Book a demo &#8594;</a>
     </nav>
   </div>
 </header>`;
@@ -71,10 +71,10 @@
     <div class="m-group">
       <div class="m-h">Company</div>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="booking.html">Booking</a>
     </div>
   </div>
-  <div class="m-cta"><a href="contact.html">Book a demo &#8594;</a></div>
+  <div class="m-cta"><a href="booking.html">Book a demo &#8594;</a></div>
 </div>`;
 
   function mount() {
