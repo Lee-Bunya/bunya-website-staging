@@ -77,8 +77,16 @@ Change a value once in `:root` and it updates across all 24 pages.
   - Works the same locally (`file://`) and when hosted — no build step.
   - Trade-off: the nav is rendered by JavaScript, so it isn't in the raw HTML
     source. Fine for staging; for production SEO you may later pre-render it.
-- The **footer** is still inline in each page (not yet single-sourced). If you
-  change the footer, change it in each page — or ask to single-source it too.
+## Footer (single-source)
+- **The footer lives in ONE place: `footer.js`** (same pattern as the nav).
+  Every page carries only a `<div id="site-footer"></div>` placeholder plus
+  `<script src="footer.js" defer></script>` in the `<head>`.
+  - **To change the footer, edit `footer.js` only** — it updates on all pages.
+  - The canonical footer was standardised from the homepage. The pages had
+    drifted into 7 different footer versions; if you want to add links that
+    some pages used to have (e.g. Partners, Case studies), add them once in
+    `footer.js`.
+  - Same JS-render trade-off as the nav (see note above).
 
 ## Conventions
 - All internal links are relative (`command-centre.html`, not absolute URLs) — so
