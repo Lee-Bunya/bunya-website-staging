@@ -65,12 +65,20 @@ Change a value once in `:root` and it updates across all 24 pages.
   faint background motif on heroes, dark bands and CTAs.
 - `logos/` — client logos for the trust bar (Regional Prosperity, Link Wealth, Falcon).
 
-## Navigation
+## Navigation (single-source)
 - Top nav: Home · Platform ▾ (products) · Grow · Partners · Resources ▾ (content + comparisons) · About · Book a demo.
 - Full-screen mobile menu (the ≡ button) mirrors this.
-- The nav + footer are repeated inline in every page's HTML (no include system,
-  since it's plain static HTML). If you change nav/footer, change it in each page
-  — or use find-and-replace across files.
+- **The nav lives in ONE place: `nav.js`.** Every page carries only a
+  `<div id="site-nav"></div>` placeholder plus `<script src="nav.js" defer></script>`
+  in the `<head>`; `nav.js` injects the header + mobile menu at load time.
+  - **To change the nav, edit `nav.js` only** — the change appears on all pages.
+  - The "current page" highlight is set automatically from the URL (Home / Grow /
+    Partners / About), so there's no per-page `active` state to maintain.
+  - Works the same locally (`file://`) and when hosted — no build step.
+  - Trade-off: the nav is rendered by JavaScript, so it isn't in the raw HTML
+    source. Fine for staging; for production SEO you may later pre-render it.
+- The **footer** is still inline in each page (not yet single-sourced). If you
+  change the footer, change it in each page — or ask to single-source it too.
 
 ## Conventions
 - All internal links are relative (`command-centre.html`, not absolute URLs) — so
