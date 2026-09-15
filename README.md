@@ -88,6 +88,20 @@ Change a value once in `:root` and it updates across all 24 pages.
     `footer.js`.
   - Same JS-render trade-off as the nav (see note above).
 
+## Cache-busting (staging)
+GitHub Pages serves everything with a 10-minute cache, which used to mean edits
+to the shared files didn't show up until a hard refresh. Each page now has a
+small inline loader in its `<head>` (marked `CB-LOADER`) that loads
+`style.css`, `nav.js` and `footer.js` with a fresh `?v=<timestamp>` on every
+page load — so shared-file changes appear immediately, no hard refresh needed.
+- A `<noscript>` fallback still loads `style.css` if JavaScript is off.
+- Trade-off: these three files are re-downloaded on every page load (never
+  cached). Fine for staging where "see my latest change now" matters most.
+- For production, drop the always-fresh loader and switch to a per-deploy
+  version (or content-hashed filenames via a build step) so returning visitors
+  get proper caching. Note: page **HTML** is still cached ~10 min by Pages, so a
+  change to a page's own body text can still need a normal refresh.
+
 ## Conventions
 - All internal links are relative (`command-centre.html`, not absolute URLs) — so
   the site works from any folder or host without changes.
