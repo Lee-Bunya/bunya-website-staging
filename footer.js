@@ -14,7 +14,7 @@
       <div><h4>Platform</h4><a href="command-centre.html">Command Centre</a><a href="broadcast-hq.html">Broadcast HQ</a><a href="bunya-voice.html">Bunya Voice</a></div>
       <div><h4>Resources</h4><a href="cost-calculator.html">Cost calculator</a><a href="vs-traditional-crm.html">Bunya vs a CRM</a><a href="xplan-alternative.html">Xplan alternative</a><a href="advice-software-alternatives.html">Alternatives compared</a><a href="faq.html">FAQ</a><a href="blog.html">Insights</a></div>
       <div><h4>Company</h4><a href="about.html">About</a><a href="partners.html">Partners</a><a href="case-studies.html">Case studies</a><a href="contact.html">Contact</a></div>
-      <div><h4>Get started</h4><a href="contact.html#check">Run the free check</a><a href="contact.html">Book a demo</a></div>
+      <div><h4>Get started</h4><a href="free-check.html">Run the free check</a><a href="contact.html">Book a demo</a></div>
     </div>
     <div class="fine"><span>&copy; 2026 Bunya. The operating system for Australian financial advice firms.</span><span>Australia &middot; Power Platform delivery</span></div>
   </div>

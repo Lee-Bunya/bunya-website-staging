@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free practice check — Bunya</title>
+<meta name="description" content="A free 90-second check for advice principals — see the production hours your practice could reclaim, and where you're exposed on proving service against fee.">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<!-- CB-LOADER: cache-busting asset loader (staging) -->
+<script>(function(){var v=Date.now();document.write('<link rel="stylesheet" href="style.css?v='+v+'">');})();</script>
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+</head>
+<body>
+<header class="lp-bar">
+  <div class="lp-bar-inner">
+    <a href="index.html" class="logo"><img src="assets/bunya-logo-colour.png" alt="Bunya" class="logo-img"></a>
+    <a href="index.html" class="lp-back">&#8592; Back to site</a>
+  </div>
+</header>
+
+
+
+<section class="section">
+  <div class="check-wrap">
+
+    <div class="check-card" id="intro" style="text-align:center">
+      <span class="check-kicker">Free &middot; 90 seconds &middot; nothing stored</span>
+      <h1>The Practice Load &amp; Exposure Check</h1>
+      <p class="lead" style="max-width:52ch;margin:0 auto">See how much of your team's production load is reclaimable &mdash; and where you're exposed on proving service against fee. Seven quick questions.</p>
+      <button class="check-btn" onclick="start()" style="margin-top:1.6em">Start the check &#8594;</button>
+      <p class="check-meta">Anonymous &middot; no obligation &middot; built by Bunya</p>
+    </div>
+
+    <div class="check-card hide" id="quiz">
+      <div class="prog"><i id="progFill" style="width:0%"></i></div>
+      <div id="qcontainer"></div>
+      <button class="check-back hide" id="backBtn" onclick="back()">&#8592; Previous</button>
+    </div>
+
+    <div class="check-card hide" id="result">
+      <span class="check-kicker">Your practice read</span>
+      <div class="headline">
+        <div class="bignum" id="hoursNum">&mdash;<small>Production hours reclaimable / year</small></div>
+      </div>
+      <p class="sub2" id="hoursSub"></p>
+
+      <!-- EMAIL GATE (shown after headline, before full breakdown) -->
+      <div class="email-gate" id="emailGate">
+        <div class="eg-inner">
+          <div class="eg-k">Your full breakdown is ready</div>
+          <p>See your production-load and service-proof exposure scores, your specific findings, and where to start &mdash; enter your email and it's yours instantly.</p>
+          <form class="eg-form" onsubmit="return revealFull(event)">
+            <input type="email" id="egEmail" placeholder="you@yourpractice.com.au" required>
+            <button type="submit" class="btn btn-primary">Show my full breakdown &#8594;</button>
+          </form>
+          <p class="eg-micro">Unlock your full breakdown on screen &mdash; and we'll email you a copy (plus a short PDF summary) to keep. No spam. [Wire the send to your CRM/email tool.]</p>
+        </div>
+      </div>
+
+      <!-- FULL BREAKDOWN (revealed after email) -->
+      <div id="fullResult" class="hide">
+      <div class="lane2">
+        <div class="metricbox"><div class="lbl">Operate</div><div class="v" id="opV">&mdash;</div><div class="n">Production load &amp; service-proof</div><div class="meter"><i id="opMeter" style="width:0%"></i></div></div>
+        <div class="metricbox"><div class="lbl">Grow</div><div class="v" id="grV">&mdash;</div><div class="n">Market visibility &amp; marketing</div><div class="meter"><i id="grMeter" style="width:0%"></i></div></div>
+      </div>
+
+      <div class="working" id="working"></div>
+
+      <div class="narrative-box"><div class="nar-k">Your practice, in plain English</div><p id="narrative"></p></div>
+
+      <div class="rec-box" id="recBox"></div>
+
+      <div class="nextsteps" id="nextsteps"></div>
+
+      <div class="check-cta">
+        <img class="lattice" src="assets/pinecone-white.png" alt="" aria-hidden="true" style="position:absolute;right:-30px;bottom:-40px;width:200px;opacity:.06">
+        <h2>See the real numbers &mdash; on your own data.</h2>
+        <p>This check is an estimate from your answers. A Bunya Blueprint builds a working model of your practice on your real data, so every number and gap becomes a specific, named list &mdash; not a guess.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Book a Blueprint call &#8594;</a>
+      </div>
+      <p class="check-disc">Indicative only, based on your answers and industry benchmarks. The Operate estimate uses adviser time-split and cost-to-serve benchmarks (2025&ndash;26); Grow is a qualitative read. Bunya removes the manual production step and makes service-vs-fee provable; it does not remove an adviser's obligations (AI drafts, a human approves) and is not legal advice.</p>
+      </div>
+      <button class="check-retake" onclick="location.reload()">&#8635; Retake the check</button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="lp-foot">
+  <div class="container">
+    <span class="logo"><img src="assets/bunya-logo-white.png" alt="Bunya" class="logo-img" style="height:26px"></span>
+    <span>&copy; 2026 Bunya &middot; For Australian financial advice firms</span>
+  </div>
+</footer>
+
+
+<script>
+// Two-lane diagnostic (Operate + Grow) with rich, personalised breakdown.
+const QUESTIONS = [
+  { lane:"operate", label:"Operate", tag:"operate", key:"docTime",
+    q:"Roughly how long does one advice document (SoA/RoA) take your team, start to finish?",
+    opts:[
+      {t:"Under 2 hours", d:"Largely automated drafting", v:0},
+      {t:"Half a day", d:"The industry norm \u2014 paraplanner bottleneck", v:3},
+      {t:"A full day or more", d:"Heavy manual assembly", v:4},
+      {t:"It varies wildly, no set process", d:"Every one is bespoke", v:4},
+    ]},
+  { lane:"operate", label:"Operate", tag:"operate", key:"reviews",
+    q:"When a review comes around, how much runs itself \u2014 booking, prep, data, follow-up?",
+    opts:[
+      {t:"The system runs the cycle end to end", d:"Automated, consistent", v:0},
+      {t:"Some of it; the rest is manual", d:"Partly person-driven", v:2},
+      {t:"Admin drives it all off a list", d:"Person-run, spreadsheet-tracked", v:4},
+      {t:"It's inconsistent / slips sometimes", d:"Ad hoc, at-risk", v:4},
+    ]},
+  { lane:"operate", label:"Operate", tag:"operate", key:"proof",
+    q:"If your licensee asked you to PROVE the service behind an ongoing fee \u2014 in one click \u2014 could you?",
+    opts:[
+      {t:"Yes, evidence assembles on demand", d:"Service-vs-fee, provable instantly", v:0},
+      {t:"Yes, but it takes real digging", d:"Scattered across systems", v:3},
+      {t:"We track consent, not proof of delivery", d:"The common gap", v:4},
+      {t:"That would be a genuine scramble", d:"Assembled by hand at audit", v:4},
+    ]},
+  { lane:"grow", label:"Grow", tag:"grow", key:"marketing",
+    q:"How consistently does your firm market itself \u2014 content, campaigns, being visible?",
+    opts:[
+      {t:"Consistently, with a real system", d:"A reliable marketing engine", v:0},
+      {t:"In bursts, when someone finds time", d:"Sporadic, effort-dependent", v:3},
+      {t:"Rarely \u2014 we rely on referrals", d:"Invisible beyond word of mouth", v:4},
+      {t:"Honestly, almost never", d:"No marketing to speak of", v:4},
+    ]},
+  { lane:"grow", label:"Grow", tag:"grow", key:"found",
+    q:"If someone searches \u2014 or asks AI \u2014 for an adviser in your area, do you show up?",
+    opts:[
+      {t:"Yes, we're found and cited", d:"Strong online presence", v:0},
+      {t:"Somewhat \u2014 patchy presence", d:"Findable, not prominent", v:3},
+      {t:"Not really", d:"Hard to find online", v:4},
+      {t:"No idea / probably not", d:"Effectively invisible", v:4},
+    ]},
+  { lane:"grow", label:"Grow", tag:"grow", key:"size",
+    q:"Roughly how many client groups does the firm serve? (sizes the opportunity)",
+    opts:[
+      {t:"Under 300", d:"", v:0, size:0},
+      {t:"300\u2013800", d:"", v:0, size:1},
+      {t:"800\u20131,500", d:"", v:0, size:2},
+      {t:"1,500+", d:"", v:0, size:3},
+    ]},
+];
+
+let step=0; const answers=[]; const A={}; // A keyed by question key -> chosen option index
+function start(){document.getElementById('intro').classList.add('hide');document.getElementById('quiz').classList.remove('hide');render();}
+function render(){
+  document.getElementById('progFill').style.width=Math.round((step/QUESTIONS.length)*100)+'%';
+  document.getElementById('backBtn').classList.toggle('hide',step===0);
+  const Q=QUESTIONS[step];
+  document.getElementById('qcontainer').innerHTML=`<div class="qwrap on">
+    <span class="qtag ${Q.tag}">${Q.label}</span><span class="qnum">Q${step+1} / ${QUESTIONS.length}</span>
+    <div class="qtext">${Q.q}</div>
+    <div class="opts">${Q.opts.map((o,i)=>`<button class="opt" onclick="pick(${i})"><b>${o.t}</b>${o.d?`<span>${o.d}</span>`:''}</button>`).join('')}</div>
+  </div>`;
+}
+function pick(i){answers[step]=QUESTIONS[step].opts[i];A[QUESTIONS[step].key]=i;step++;step<QUESTIONS.length?render():finish();}
+function back(){if(step>0){step--;render();}}
+function revealFull(e){e.preventDefault();var email=document.getElementById('egEmail').value;
+  // [WIRE: send email + scores + recommended lane + full breakdown to your CRM/email tool]
+  document.getElementById('emailGate').classList.add('hide');
+  document.getElementById('fullResult').classList.remove('hide');
+  document.getElementById('fullResult').scrollIntoView({behavior:'smooth',block:'start'});return false;}
+function laneScore(lane){const items=answers.filter((a,idx)=>QUESTIONS[idx].lane===lane);const raw=items.reduce((s,a)=>s+(a.v||0),0);const max=items.length*4;return Math.round((raw/max)*100);}
+function band(p){return p<34?"Low":p<67?"Elevated":"High";}
+const fmt=n=>Math.round(n).toLocaleString();
+
+function finish(){
+  const opPct=laneScore("operate"), grPct=laneScore("grow");
+  const size=A.size!==undefined?A.size:1;
+  const groups=[200,550,1150,1700][size];
+
+  // --- OPERATE working: split reclaimable hours into components from their answers ---
+  const docV=QUESTIONS[0].opts[A.docTime].v;      // document time (0/3/4)
+  const revV=QUESTIONS[1].opts[A.reviews].v;      // reviews (0/2/4)
+  // docs/yr ~ groups*1.1 advice events; hours saved per doc scales with docV; reviews across groups scale with revV
+  const docHours = Math.round((groups*1.1*(docV/4)*2.5)/10)*10;   // production time on documents
+  const revHours = Math.round((groups*(revV/4)*1.1)/10)*10;       // time on review admin
+  const totalHours = docHours + revHours;
+  const proofGap = QUESTIONS[2].opts[A.proof].v >= 3;             // service-proof exposure flag
+
+  document.getElementById('quiz').classList.add('hide');
+  document.getElementById('result').classList.remove('hide');
+  document.getElementById('hoursNum').innerHTML=`~${fmt(totalHours)}<small>Production hours reclaimable / year</small>`;
+  document.getElementById('hoursSub').textContent=`Roughly ${Math.round(totalHours/1600*10)/10} full-time equivalents currently spent producing rather than advising.`;
+
+  setLane('op',opPct); setLane('gr',grPct);
+
+  // --- SHOW THE WORKING (Operate) ---
+  document.getElementById('working').innerHTML=`
+    <div class="wk-k">How that number breaks down</div>
+    <div class="wk-row"><span>Document production (SoAs / RoAs)</span><b>~${fmt(docHours)} hrs</b></div>
+    <div class="wk-row"><span>Review admin (booking, prep, follow-up)</span><b>~${fmt(revHours)} hrs</b></div>
+    <div class="wk-row"><span>Service-vs-fee proof</span><b>${proofGap?'Exposed':'Covered'}</b></div>
+    <div class="wk-row total"><span>Reclaimable production time</span><b>~${fmt(totalHours)} hrs / yr</b></div>
+    <p class="wk-note">Estimated from your answers and adviser time-split / cost-to-serve benchmarks (2025\u201326), scaled to ~${fmt(groups)} client groups.</p>`;
+
+  // --- PERSONALISED NARRATIVE (reflects their specific answers) ---
+  let nar=[];
+  const docTxt=["your documents are already fast","documents take about half a day each","documents take a full day or more","document time is inconsistent"][A.docTime];
+  const revTxt=["reviews largely run themselves","part of your review cycle is still manual","your reviews run off a list, by hand","reviews sometimes slip"][A.reviews];
+  const proofTxt=["and you can already prove service against every fee on demand","but proving service against fee takes real digging","and you capture consent rather than proof of delivery \u2014 the gap that triggers remediation","and proving service against fee would be a genuine scramble"][A.proof];
+  nar.push(`You told us ${docTxt}, ${revTxt}, ${proofTxt}.`);
+  const mktTxt=["Your marketing runs consistently","Your marketing happens in bursts","You rarely market beyond referrals","You market almost never"][A.marketing];
+  const foundTxt=["and you're found online","and your online presence is patchy","and you're hard to find online","and you're effectively invisible online"][A.found];
+  nar.push(`${mktTxt}, ${foundTxt}.`);
+  nar.push(opPct>=grPct
+    ? "Your biggest opportunity right now is <b>reclaiming production time</b> \u2014 freeing your team from manual document and review work so they spend more time advising."
+    : "Your biggest opportunity right now is <b>visibility</b> \u2014 becoming a firm your market actually hears from, while your competitors stay quiet.");
+  document.getElementById('narrative').innerHTML=nar.join(' ');
+
+  // --- RECOMMENDATION (route to bigger constraint) ---
+  const lanes=[{k:'operate',pct:opPct},{k:'grow',pct:grPct}].sort((a,b)=>b.pct-a.pct);
+  const rec=RECS[lanes[0].k];
+  document.getElementById('recBox').innerHTML=`<div class="rec-k">Where to start</div><h3>${rec.title}</h3><p>${rec.body}</p><a href="${rec.href}" class="btn btn-primary btn-lg">${rec.cta} &#8594;</a>`;
+
+  // --- NEXT STEPS per lane ---
+  document.getElementById('nextsteps').innerHTML=`
+    <div class="ns-k">Practical next steps</div>
+    <div class="ns-col"><h4>Operate</h4><ul>${NEXT.operate[band(opPct)].map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    <div class="ns-col"><h4>Grow</h4><ul>${NEXT.grow[band(grPct)].map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+}
+function setLane(id,pct){document.getElementById(id+'V').textContent=band(pct);document.getElementById(id+'Meter').style.width=pct+'%';}
+
+const RECS={
+  operate:{title:"Start by reclaiming production time.",
+    body:"Your team is spending too much of its week producing documents and running reviews by hand \u2014 and proving service against fee is harder than it should be. The Bunya Command Centre takes that production load off your people and makes service-vs-fee provable in one click.",
+    cta:"See the Command Centre", href:"command-centre.html"},
+  grow:{title:"Start by becoming visible.",
+    body:"Your operations may be fine, but hardly anyone hears from you \u2014 which is exactly why the firms that do market pull away. Bunya's Grow arm gives you the brand, website, SEO and compliant content engine to become the firm people have actually heard of.",
+    cta:"Explore Grow", href:"grow.html"},
+};
+const NEXT={
+  operate:{
+    Low:["Keep the production system tight as you scale","Use reclaimed time to deepen client relationships"],
+    Elevated:["Move document drafting off manual assembly","Automate the review cycle so it self-starts","Tighten how service-vs-fee evidence is kept"],
+    High:["Get documents generating from data you already hold","Take the review cycle off spreadsheets and memory","Make service-vs-fee provable in one click, not a scramble"]},
+  grow:{
+    Low:["Keep the marketing engine running consistently","Measure what converts and do more of it"],
+    Elevated:["Turn sporadic marketing into a steady rhythm","Shore up your website and search presence"],
+    High:["Get a brand and website that convert","Set up a compliant content engine so marketing actually happens","Make sure you're found on Google and by AI"]},
+};
+
+</script>
+</body>
+</html>
