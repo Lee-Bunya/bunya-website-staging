@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad landing pages — internal review — Bunya</title>
+<meta name="robots" content="noindex,nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--grid:#0A7D79;--pulse:#11B8B1;--focus:#013B43;--deep:#0C3A3A;--ink:#0E2B2A;--muted:#5A7472;--line:#E2ECEB;--pale:#F4F9F8;--pale2:#EAF3F2;--white:#fff;--signal:#F4B528;--radius:8px;--radius-lg:16px;--font-brand:"Poppins","Manrope",sans-serif;--font-ui:"Manrope",sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-ui);color:var(--ink);background:var(--pale);line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:940px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(20px,5vw,40px)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:2.4em}
+.logo{display:inline-flex;align-items:center;gap:10px}
+.logo .wordmark{font-family:var(--font-brand);font-weight:700;font-size:1.28rem;color:var(--ink)}
+.back{font-size:.85rem;font-weight:600;color:var(--muted)}
+.back:hover{color:var(--grid)}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grid);margin-bottom:.8em}
+h1{font-family:var(--font-brand);font-weight:800;font-size:clamp(1.9rem,4vw,2.6rem);letter-spacing:-.02em;line-height:1.05}
+.lead{color:var(--muted);font-size:1.08rem;margin-top:.6em;max-width:60ch}
+.note{background:#FFF9EC;border:1px solid #F4E2B8;border-left:4px solid var(--signal);border-radius:var(--radius);padding:16px 20px;margin:1.8em 0;font-size:.92rem;color:var(--focus)}
+.note b{color:var(--ink)}
+.note ul{margin:.5em 0 0 1.1em;display:flex;flex-direction:column;gap:.3em}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:1.4em}
+@media(max-width:680px){.grid{grid-template-columns:1fr}}
+.card{display:block;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px;box-shadow:0 1px 3px rgba(10,42,46,.05),0 8px 22px rgba(10,42,46,.05);transition:transform .12s,box-shadow .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--grid);box-shadow:0 14px 34px rgba(10,42,46,.12)}
+.card .theme{font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--grid);background:var(--pale2);display:inline-block;padding:4px 10px;border-radius:100px;margin-bottom:.9em}
+.card h3{font-family:var(--font-brand);font-weight:700;font-size:1.12rem;color:var(--ink);margin-bottom:.3em;line-height:1.25}
+.card p{font-size:.9rem;color:var(--muted)}
+.card .go{margin-top:1em;font-weight:600;font-size:.85rem;color:var(--grid)}
+.foot{margin-top:2.6em;padding-top:1.4em;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <span class="logo"><svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 2 L30 10 L20 18 L10 10 Z" fill="#0A7D79"/><path d="M20 14 L30 22 L20 30 L10 22 Z" fill="#11B8B1"/><path d="M20 26 L27 31.5 L20 37 L13 31.5 Z" fill="#F4B528"/></svg><span class="wordmark">Bunya</span></span>
+    <a href="../index.html" class="back">&#8592; Back to main site</a>
+  </div>
+
+  <p class="kicker">Internal review &middot; not published</p>
+  <h1>Ad landing pages</h1>
+  <p class="lead">Five standalone landing pages for paid traffic (Google / Meta). Each is deliberately separate from the main site — stripped nav, single focus, <code>noindex</code> — and drives to the free check. This index is for team review before we run ads.</p>
+
+  <div class="note">
+    <b>For reviewers — a few things are placeholder, not bugs:</b>
+    <ul>
+      <li>The <b>form on each page</b> just shows a success message — it isn't wired to a CRM/email yet. The real path to the check is the <b>"Run the free check"</b> buttons.</li>
+      <li>Each page's form says <b>"7 questions"</b>; the live check currently has <b>6</b>.</li>
+      <li>A visible <b>[Wire form…]</b> note sits under each form — a reminder to connect the backend before going live.</li>
+      <li><b>No conversion tracking</b> (Google Ads / Meta pixel) yet — added when campaigns are set up.</li>
+    </ul>
+  </div>
+
+  <div class="grid">
+    <a class="card" href="bunya-landing-oneclick-soa.html">
+      <span class="theme">One-click SoA</span>
+      <h3>Generate a full SoA in one click</h3>
+      <p>For "statement of advice automation" style searches.</p>
+      <div class="go">View page &#8594;</div>
+    </a>
+    <a class="card" href="bunya-landing-xplan-alternative.html">
+      <span class="theme">Xplan alternative</span>
+      <h3>Looking for an Xplan alternative?</h3>
+      <p>For advisers searching for a platform to switch to.</p>
+      <div class="go">View page &#8594;</div>
+    </a>
+    <a class="card" href="bunya-landing-soa-bottleneck.html">
+      <span class="theme">SoA bottleneck</span>
+      <h3>The SoA is the bottleneck. Not any more.</h3>
+      <p>For the paraplanning / production-time pain point.</p>
+      <div class="go">View page &#8594;</div>
+    </a>
+    <a class="card" href="bunya-landing-grow-without-hiring.html">
+      <span class="theme">Grow without hiring</span>
+      <h3>Grow the firm without hiring in lockstep</h3>
+      <p>For the capacity / scaling angle.</p>
+      <div class="go">View page &#8594;</div>
+    </a>
+    <a class="card" href="bunya-landing-compliance-exposure.html">
+      <span class="theme">Compliance exposure</span>
+      <h3>Could you prove the service behind every fee?</h3>
+      <p>For the fee-for-no-service / compliance angle.</p>
+      <div class="go">View page &#8594;</div>
+    </a>
+  </div>
+
+  <p class="foot">These pages are <code>noindex,nofollow</code> and are not linked from the main site's navigation or sitemap. They live under <code>/lp/</code> purely so the team can review them on the staging site.</p>
+</div>
+</body>
+</html>
