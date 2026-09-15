@@ -32,6 +32,7 @@
           <a href="xplan-alternative.html" class="dd-link"><span class="t">Xplan alternative</span><span class="d">The alternative you own, not rent</span></a>
           <a href="advice-software-alternatives.html" class="dd-link"><span class="t">Alternatives compared</span><span class="d">The whole field, side by side</span></a>
           <a href="fin365-alternative.html" class="dd-link"><span class="t">Bunya vs Fin365</span><span class="d">The closest comparison, honestly</span></a>
+          <a href="vs-ai-plugin.html" class="dd-link"><span class="t">Bunya vs an AI plugin</span><span class="d">Own the system, or rent a layer</span></a>
         </div>
       </div>
       <a href="about.html">About</a>
@@ -67,6 +68,7 @@
       <a href="xplan-alternative.html">Xplan alternative</a>
       <a href="advice-software-alternatives.html">Alternatives compared</a>
       <a href="fin365-alternative.html">Bunya vs Fin365</a>
+      <a href="vs-ai-plugin.html">Bunya vs an AI plugin</a>
     </div>
     <div class="m-group">
       <div class="m-h">Company</div>
