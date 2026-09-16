@@ -1,6 +1,12 @@
 /* Homepage product tour. All panels remain readable when JavaScript is disabled. */
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
+  // Supplied vector artwork: no recolouring, redrawing or wordmark retyping.
+  document.querySelectorAll('header.nav .logo-img, footer.site .logo-img').forEach(function (logo) {
+    logo.src = 'assets/brand/bunya-primary.svg';
+  });
+  var mobileLogo = document.querySelector('.m-overlay .logo-img');
+  if (mobileLogo) mobileLogo.src = 'assets/brand/bunya-reversed.svg';
   var tablist = document.querySelector('.hp-product-tabs');
   if (!tablist) return;
   var tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
