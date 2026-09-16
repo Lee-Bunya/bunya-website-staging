@@ -12,14 +12,14 @@
 </head>
 <body>
 <div id="site-nav"></div>
-
+<!-- FULL-SCREEN MOBILE MENU -->
 
 
 <!-- TWO PATHS -->
 <section class="section">
   <div class="container">
     <p class="eyebrow">Two ways in</p>
-    <h2 class="measure-narrow">Start wherever you're ready.</h2>
+    <h2 class="measure-narrow">The free check, or the real thing.</h2>
     <div class="contact-paths">
       <div class="path-card check" id="check">
         <div class="pk">Not ready to talk yet</div>
@@ -28,9 +28,10 @@
         <ul>
           <li>Your reclaimable hours, estimated</li>
           <li>Your service-proof exposure, flagged</li>
-          <li>Your headline result on the spot &mdash; no signup to start</li>
+          <li>No email wall to see the result</li>
         </ul>
-        <div class="btn-row"><a href="free-check.html" class="btn btn-primary">Run the free check <span class="arrow">&#8594;</span></a></div>
+        <div class="btn-row"><a href="free-check.html" class="btn btn-primary" data-placeholder="check-url">Run the free check <span class="arrow">&#8594;</span></a></div>
+        <p class="microcopy">Link the diagnostic here &mdash; placeholder.</p>
       </div>
       <div class="path-card demo">
         <div class="pk">Ready to see it</div>
@@ -50,6 +51,8 @@
   </div>
 </section>
 
+<div class="path-divider no-mark" aria-hidden="true"></div>
+
 <!-- REINFORCING BAND (matches calculator rhythm) -->
 <section class="section section-deep">
   <div class="container center">
@@ -58,6 +61,8 @@
     <p class="lead mx-auto measure" style="margin-top:1em;color:rgba(255,255,255,.85)">Run the check and you'll see where your practice stands in 90 seconds. Book a demo and we'll walk you through the working system on your own data &mdash; and if it's not right for you, we'll say so. Either way, you'll leave knowing more than when you arrived.</p>
   </div>
 </section>
+
+<div class="path-divider seed" aria-hidden="true"></div>
 
 <!-- CONTACT METHODS -->
 <section class="section">
@@ -76,5 +81,16 @@
 <script>
 function playVideo(el){var src=el.getAttribute('data-embed');if(!src){return;}el.innerHTML='<iframe src="'+src+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';}
 function handleSubmit(e){e.preventDefault();e.target.style.display='none';document.getElementById('formOk').style.display='block';return false;}</script>
+<script>
+(function(){
+  var cards=document.querySelectorAll('.path-card, .cmethod');
+  if(!cards.length||!('IntersectionObserver' in window))return;
+  cards.forEach(function(el,i){el.classList.add('rise');el.style.transitionDelay=(i%3*0.06)+'s';});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.25});
+  cards.forEach(function(el){io.observe(el);});
+})();
+</script>
 </body>
 </html>

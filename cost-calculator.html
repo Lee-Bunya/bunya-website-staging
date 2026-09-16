@@ -12,12 +12,13 @@
 </head>
 <body>
 <div id="site-nav"></div>
+<!-- FULL-SCREEN MOBILE MENU -->
 
 
 <!-- HOOK -->
 <section class="page-hero">
   <div class="container">
-    <p class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Cost calculator</p>
+    <p class="breadcrumb"><a href="#">Home</a> &nbsp;/&nbsp; Cost calculator</p>
     <span class="modtag"><span class="dot"></span> The cost of "without"</span>
     <h1 class="measure">What is running your practice the old way costing you?</h1>
     <p class="lead measure" style="margin-top:1em">Not a quote &mdash; a mirror. Put in your own numbers and see what the current model costs every year across the three places it hides: the software you rent, the admin time you burn, and the hire you'd need to grow the manual way. Every assumption is yours to change.</p>
@@ -64,7 +65,7 @@
             <div class="cbline tot"><span class="l">Total, per year</span><span class="n" id="grandN">$0</span></div>
           </div>
           <div class="cpayback" id="payback"></div>
-          <a href="booking.html" class="cta">See your exact payback on a call &#8594;</a>
+          <a href="#" class="cta">See your exact payback on a call &#8594;</a>
         </div>
         <p class="cdisc" id="disc"></p>
       </div>
@@ -72,15 +73,19 @@
   </div>
 </section>
 
+<div class="path-divider no-mark" aria-hidden="true"></div>
+
 <!-- POST-RESULT CTA -->
 <section class="section section-deep">
   <div class="container center">
     <p class="eyebrow mx-auto" style="text-align:center">You've seen the cost. Now see the fix.</p>
-    <h2 class="mx-auto" style="max-width:22ch">Bunya replaces the subscriptions, removes the production time, and lets you grow without the hire.</h2>
+    <h2 class="mx-auto" style="max-width:none">Bunya replaces the subscriptions, removes the production time, and lets you grow without the hire.</h2>
     <p class="lead mx-auto measure" style="margin-top:1em">One system, built to your firm, in your own Microsoft 365 &mdash; and you own it. Book a demo and we'll show you the exact numbers for your practice, on your own data.</p>
     <div class="btn-row" style="justify-content:center"><a href="booking.html" class="btn btn-primary btn-lg">Book a demo <span class="arrow">&#8594;</span></a><a href="free-check.html" class="btn btn-outline-light btn-lg">Run the free check</a></div>
   </div>
 </section>
+
+<div class="path-divider seed" aria-hidden="true"></div>
 
 <!-- TWO TOOLS -->
 <section class="section">
@@ -117,6 +122,17 @@ function calc(){
   $('disc').textContent='Indicative only, based on the numbers you enter and conservative industry assumptions (loaded staff cost, admin hours per review cycle). The software figure uses your own subscription costs and is the most precise line. This estimates the annual cost of the current model; it is not a quote. Your exact investment and payback are confirmed on a call and, if you proceed, in a Blueprint on your own data. AUD, ex GST.';
 }
 calc();
+</script>
+<script>
+(function(){
+  var cards=document.querySelectorAll('.calc-grid > *');
+  if(!cards.length||!('IntersectionObserver' in window))return;
+  cards.forEach(function(el,i){el.classList.add('rise');el.style.transitionDelay=(i%3*0.06)+'s';});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.25});
+  cards.forEach(function(el){io.observe(el);});
+})();
 </script>
 </body>
 </html>
