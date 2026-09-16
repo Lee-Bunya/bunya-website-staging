@@ -20,3 +20,6 @@ Thumbs.db
 
 # Source archive (unpacked into this folder — no need to version it)
 bunya-website.zip
+
+# Source drop folder for blog images (optimized copies live in assets/img)
+Blog Images/
